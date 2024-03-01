@@ -11,11 +11,9 @@
     <modules>
         <module>singleton</module>
         <module>prototype</module>
-<<<<<<< HEAD
-=======
         <module>factorymethod</module>
         <module>factoryabstract</module>
-        >>>>>>> factory-method
+        <module>builder</module>
     </modules>
     <dependencies>
         <dependency>
