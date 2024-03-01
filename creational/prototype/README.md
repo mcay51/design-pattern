@@ -9,7 +9,8 @@ Prototype deseni, özellikle bir nesnenin kopyasını oluşturmanın zor olduğu
 Prototype deseni, kodun diğer sınıflara bağımlı olmadığı durumlarda kullanılabilir. Örneğin, kodunuz başka bir sınıftan gelen nesnelerle çalışıyorsa ve bu nesnelerin özellikleri hakkında pek bir fikriniz yoksa, prototip deseni işinize yarayabilir. Ayrıca, bu desen sınıfın alt sınıflarının sayısını azaltmak için de kullanılabilir. Yani, benzer özelliklere sahip nesneleri oluşturmak için bir sürü alt sınıf oluşturmak yerine, bir prototipi klonlayabilirsiniz.
 
 **Sonuç:**
-Prototype design pattern, nesnelerinizi kopyalamanıza ve daha esnek bir şekilde kullanmanıza olanak tanır. Bu desen, özellikle nesnelerinizi başka sınıflara bağımlı olmadan oluşturmanızı sağlar. Bu sayede, kodunuz daha modüler ve bakımı daha kolay hale gelir. Prototype deseni, 
+Prototype design pattern, nesnelerinizi kopyalamanıza ve daha esnek bir şekilde kullanmanıza olanak tanır. Bu desen, özellikle nesnelerinizi başka sınıflara bağımlı olmadan oluşturmanızı sağlar. Bu sayede, kodunuz daha modüler ve bakımı daha kolay hale gelir.
+
 ----------------------------------------------------------------------------
 Introduction:
 The Prototype design pattern is a structure used to create a copy of an object. Think of it like making a duplicate of a picture, but sometimes there are some hidden details that are hard to access.
