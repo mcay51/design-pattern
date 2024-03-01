@@ -11,6 +11,10 @@
     <modules>
         <module>singleton</module>
         <module>prototype</module>
+<<<<<<< HEAD
+=======
+        <module>factorymethod</module>
+>>>>>>> factory-method
     </modules>
     <dependencies>
         <dependency>
