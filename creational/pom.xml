@@ -14,7 +14,8 @@
 <<<<<<< HEAD
 =======
         <module>factorymethod</module>
->>>>>>> factory-method
+        <module>factoryabstract</module>
+        >>>>>>> factory-method
     </modules>
     <dependencies>
         <dependency>
