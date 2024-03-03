@@ -1,0 +1,11 @@
+***Strateji tasarım deseni,*** yazılım geliştirme sürecinde karşılaşılan karmaşık algoritmaların yönetimini kolaylaştıran bir yaklaşım sunar. Bu desen, bir nesnenin farklı algoritmalar ailesini tanımlamasını, her birini kapsüllemesini ve değiştirilebilir hale getirmesini sağlar. Bu sayede, nesnelerin belirli bir algoritmayı seçerek bağımsız olarak değişmesi mümkün olur.
+
+Özellikle navigasyon uygulamaları gibi karmaşık sistemlerde, farklı rota bulma algoritmalarının yönetimi oldukça zor olabilir. Strateji tasarım deseni, bu tür durumlarda büyük bir kolaylık sağlar. Örneğin, otomobil, yürüme, bisiklet veya toplu taşıma gibi farklı seçenekler için ayrı ayrı rota bulma stratejileri oluşturulabilir ve uygulama içinde kolayca değiştirilebilir.
+
+Bu desenin temel amacı, bir algoritma ailesi oluşturmak ve ardından bu algoritmaları ayrı sınıflara ayırarak, bu sınıflar arasında geçiş yapmayı mümkün kılmaktır. Bu sayede, uygulama geliştiricileri farklı rota bulma stratejilerini kolaylıkla entegre edebilir ve mevcut stratejileri değiştirebilirler.
+
+***Örneğin,*** başlangıçta sadece otomobil kullanıcıları için rota bulma stratejileri geliştirilmiş olabilir. Ancak, ilerleyen dönemlerde yürüme, bisiklet veya toplu taşıma gibi farklı kullanıcı grupları için de benzer stratejilerin geliştirilmesi gerekebilir. Strateji tasarım deseni sayesinde, bu yeni stratejiler kolaylıkla entegre edilebilir ve mevcut stratejilerle değiştirilebilir.
+
+Bu desen aynı zamanda kodun daha modüler ve bakımı kolay hale gelmesini de sağlar. Her bir rota bulma stratejisi ayrı bir sınıf olarak tanımlanır ve bu sayede her bir strateji bağımsız olarak test edilebilir ve bakımı yapılabilir.
+
+***Sonuç olarak,*** Strateji tasarım deseni navigasyon uygulamaları gibi karmaşık sistemlerde farklı rota bulma stratejilerinin yönetimini kolaylaştırır, kodun modülerliğini arttırır ve bakımını kolaylaştırır. Bu sayede, uygulama geliştiricileri farklı kullanıcı grupları için özelleştirilmiş rota bulma stratejilerini kolaylıkla entegre edebilir ve uygulamanın esnekliğini arttırabilirler.
