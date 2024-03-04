@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world! Mediator Design Pattern");
-       // mediatorOrnekUI();
+        mediatorOrnekUI();
         mediatorMesajServiceOrnek();
 
     }
