@@ -17,6 +17,7 @@
         <module>iterator</module>
         <module>visitor</module>
         <module>template</module>
+        <module>state</module>
     </modules>
     <dependencies>
         <dependency>
