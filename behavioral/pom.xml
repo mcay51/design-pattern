@@ -14,6 +14,7 @@
         <module>memento</module>
         <module>mediator</module>
         <module>chainofresponsibility</module>
+        <module>iterator</module>
     </modules>
     <dependencies>
         <dependency>
