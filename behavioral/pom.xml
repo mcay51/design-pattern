@@ -16,6 +16,7 @@
         <module>chainofresponsibility</module>
         <module>iterator</module>
         <module>visitor</module>
+        <module>template</module>
     </modules>
     <dependencies>
         <dependency>
