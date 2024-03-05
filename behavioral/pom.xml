@@ -15,6 +15,7 @@
         <module>mediator</module>
         <module>chainofresponsibility</module>
         <module>iterator</module>
+        <module>visitor</module>
     </modules>
     <dependencies>
         <dependency>
