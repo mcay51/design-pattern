@@ -21,4 +21,11 @@ behavioral/.idea/jarRepositories.xml
 behavioral/.idea/misc.xml
 behavioral/.idea/vcs.xml
 behavioral/.idea/workspace.xml
+structural/.DS_Store
+structural/.idea/compiler.xml
+structural/.idea/encodings.xml
+structural/.idea/jarRepositories.xml
+structural/.idea/misc.xml
+structural/.idea/vcs.xml
+structural/.idea/workspace.xml
 *.class
