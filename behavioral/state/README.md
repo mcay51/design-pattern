@@ -14,8 +14,7 @@
 
 	State tasarım deseni, nesnelerin davranışlarını değiştirmek ve kodun yönetilebilirliğini artırmak için güçlü bir araçtır. Farklı durumların ve davranışların modüler bir şekilde yönetilmesini sağlayarak, yazılım geliştirme sürecini kolaylaştırabilir. Bu desen, karmaşık durum makinesi yapılarını daha anlaşılır hale getirerek, kodun bakımını ve genişletilmesini kolaylaştırabilir.
 
-	***------------------------------------------------------------------------------------***
-
+---
 	State Design Pattern: A Way to Change Object Behavior
 
 	The State design pattern is a design pattern that allows an object's behavior to change when its internal state changes. It enables different behaviors to be applied in different states, acting as if the object's class has changed.

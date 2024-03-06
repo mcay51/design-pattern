@@ -12,7 +12,7 @@ Mediator deseni, Chain of Responsibility, Command, Observer gibi diğer tasarım
 
 Sonuç olarak, Mediator tasarım deseni, yazılım geliştirme süreçlerinde objeler arasındaki karmaşıklığı azaltmak ve sistemi daha modüler hale getirmek için güçlü bir çözüm sunmaktadır. Doğru şekilde uygulandığında, daha temiz, düzenli ve bakımı kolay bir kod yapısının oluşmasına katkı sağlar. Bu da geliştirme süreçlerini daha verimli hale getirir ve yazılımın kalitesini artırır.
 
-***-----------------------------------------------------------------------------------***
+---
 
 In software development processes, organizing and managing complex dependencies between objects poses a significant challenge. To overcome this difficulty, the Mediator design pattern has been developed. This pattern regulates interactions between objects, making the system more modular and easier to maintain. The Mediator pattern reduces complexity by restricting direct communication and instead facilitates communication between objects through a single intermediary.
 

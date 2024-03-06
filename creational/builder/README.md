@@ -14,7 +14,7 @@ Builder deseni aynı zamanda teleskopik yapılandırmadan kurtulmanıza da yard�
 
 Tüm bunların ötesinde, Builder deseni karmaşıklığı azaltmak için harika bir rehberlik sunar. Adım adım ilerleyerek istediğiniz nesneyi oluşturabilir ve gereksiz karmaşıklıklardan kaçınabilirsiniz. Tek seferde her şeyi halletmek zorunda olmadığınızı unutmayın; adımları takip ederek istediğiniz sonuca ulaşabilirsiniz. Dolayısıyla Builder deseniyle nesne oluşturma sürecindeki karmaşıklığı aşabilirsiniz!
 
-***----------------------------------------------------------------------------------***
+---
 
 Builder Design Pattern: A Roadmap to Reduce Complexity
 

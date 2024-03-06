@@ -14,7 +14,7 @@ Sonuç olarak, ziyaretçi deseni sayesinde düğüm uç sınıflarını değişt
 
 Sonuç olarak, ziyaretçi deseni coğrafi bilgilerinizi ziyaret etmenizi sağlayan harika bir tasarım deseni diyebiliriz. Umarım bu bilgi sizin için faydalı olmuştur ve coğrafi bilgilerinizin ziyaretine keyifli bir yolculuk olmuştur!
 
-***------------------------------------------------------------------***
+---
 
 Visitor Design Pattern: Visiting Geographic Information
 

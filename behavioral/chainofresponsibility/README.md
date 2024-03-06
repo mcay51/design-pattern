@@ -1,8 +1,8 @@
-Java'da Sorumluluk Zinciri Tasarım Deseni Anlama
+# Chain of Responsibility Tasarım Deseni Anlama
 
 Sorumluluk Zinciri, aynı zamanda "Responsibility Chain" olarak da bilinen, bir davranışsal tasarım desenidir ve bir isteği bir dizi işleyici üzerinden geçirerek isteği uygun şekilde işlemenizi sağlar. Bu, keşfedeceğimiz ilk davranışsal tasarım desenlerinden biridir ve bir web geliştiricisiyseniz, özellikle ara yazılım tasarımlarında faydalı bulacaksınız.
 
-Sorun
+## Sorun
 
 Çevrimiçi sipariş işleme sistemi üzerinde çalıştığınızı hayal edin. Sistemin sınırlı erişime sahip olmasını istiyorsunuz ve yalnızca kimlik doğrulaması yapılmış kullanıcıların sipariş verebilmesine izin vermek istiyorsunuz. Ayrıca, yönetici ayrıcalıklarına sahip kullanıcıların tüm siparişlere tam erişime sahip olmalarını istiyorsunuz. Bir süre sonra, bu kontrol işlemlerinin sıralı olarak gerçekleştirilmesi gerektiğini fark edersiniz. Örneğin, uygulama bir kullanıcı girişi bilgisi içeren bir istek aldığında, kullanıcıyı doğrulamaya çalışmalıdır. Giriş bilgileri yanlışsa, daha fazla kontrol yapmaya gerek yoktur.
 
@@ -13,7 +13,7 @@ Zamanla, daha fazla sıralı kontrol eklemeniz gerekebilir:
 
 Bu kontrolleri zaten şişmiş kod tabanınıza eklemek işleri daha da karmaşık hale getirir. Bir kontrolü değiştirmek bazen diğerlerini etkiler. En kötüsü, bu kontrollerden bazılarını sistemin başka bir yerinde kullanmak istediğinizde, kodları yeniden kullanılabilir olmadıkları için kopyalayıp yapıştırma yapmak zorunda kalırsınız.
 
-Çözüm
+## Çözüm
 
 Sorumluluk Zinciri deseni, belirli davranışları işleyici nesnelerine dönüştürmeye dayanır. Örneğimizde, her adım bağımsız bir işleyici sınıfı haline gelir ve tek bir kontrol yöntemi içeren bu sınıfı içerir. İstek ve tüm verileri bu yönteme parametre olarak gönderilir.
 
@@ -25,14 +25,16 @@ Bu yaklaşım genellikle grafiksel kullanıcı arayüzlerinde olay işleme ile u
 
 Tüm işleyici sınıflarının aynı arayüze uyması çok önemlidir. Her işleyici, bir sonraki işleyicinin aynı yürütülebilir yönteme sahip olduğunu bilmelidir. Bu, işleyicilerin sınıflarına bağımlı olmadan çalışma zamanında zincirler oluşturmanıza olanak tanır.
 
-Uygulanabilirlik
+## Uygulanabilirlik
 
 Sorumluluk Zinciri desenini kullanmayı düşünmelisiniz:
 - Programınızın farklı türde istekleri çeşitli şekillerde işlemesi gerekiyorsa ancak türlerini veya sıralarını önceden bilmiyorsanız.
 - Birkaç işleyiciyi sıralı olarak yürütmek gerekiyorsa.
 - Belirli bir işleyici dizisinin öğeleri ve sırasının çalışma zamanında dinamik olarak değişmesi gerekiyorsa.
 
-Diğer Tasarım Desenleriyle İlişkisi
+## Diğer Tasarım Desenleriyle İliş
+
+kisi
 
 - Chain of Responsibility, Command, Mediator ve Observer ile birlikte gönderenleri ve alıcıları bağlamak için çeşitli yöntemler sunar.
 - Chain of Responsibility, dinamik potansiyel alıcı zinciri boyunca isteği iletip biri bunu ele alana kadar geçirir.
@@ -44,9 +46,7 @@ Diğer Tasarım Desenleriyle İlişkisi
 - Tersine, istek kendisi bir Komut nesnesi olduğunda, farklı bağlamlarda aynı işlem zinciri boyunca mevcuttur. Bu senaryoda aynı işlem zinciri boyunca farklı bağlamlarda aynı işlem yürütülebilir.
 
 Sonuç olarak, Sorumluluk Zinciri deseni, istekleri dinamik olarak ele almak için esnek bir çözüm sunar. Doğru bir şekilde uygulandığında, kod tabanınızı basitleştirerek daha bakım kolayı ve ölçeklenebilir hale getirebilir ve nihayetinde yazılım geliştirme sürecinizin verimliliğini ve kalitesini artırabilirsiniz.
-
-***-------------------------------------------------------------------***
-
+---
 **Understanding the Responsibility Chain Design Pattern in Java**
 
 The Responsibility Chain, also known as the "Responsibility Chain," is a behavioral design pattern that allows you to process a request appropriately through a series of handlers. It is one of the first behavioral design patterns we will explore, and if you are a web developer, you will find it particularly useful in middleware designs.

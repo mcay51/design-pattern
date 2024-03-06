@@ -8,7 +8,7 @@ Memento deseni, diğer tasarım desenleriyle de ilişkilidir. Örneğin, Komut T
 
 ***Sonuç olarak,*** Memento tasarım deseni, nesne durumlarını esnek ve kapsüllenmiş bir şekilde yönetmek için sağlam bir çözüm sunar. Bu desen, yazılım sistemlerinin bakımını kolaylaştırır ve geliştiricilere değerli bir araç sunar.
 
-***----------------------------------------------------------------------------------------***
+---
 
 The Memento design pattern is a powerful tool used in the software development world for dynamically managing relationships between objects and making systems modular. This pattern allows an object to save and restore its previous state, thus preserving flexibility and adaptability.
 

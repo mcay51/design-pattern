@@ -16,7 +16,7 @@ Bu desenin en güzel yanı, gerçek bir fabrika gibi düşünüp hayal gücünü
 
 Unutmayın, Abstract Factory deseni sadece kodunuzu iyileştirmekle kalmaz, aynı zamanda müşterilerinizi de mutlu eder!
 
-***----------------------------------------------------------------------------------------***
+---
 
 The Abstract Factory design pattern can help you when you want to turn your code into a furniture store. This pattern represents an abstract factory. Be excited and creative because this factory is abstract and challenges your imagination!
 

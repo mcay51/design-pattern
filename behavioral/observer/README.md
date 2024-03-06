@@ -14,7 +14,7 @@ Observer tasarım deseni, Chain of Responsibility, Command, Mediator gibi diğer
 
 ***Sonuç olarak,*** Observer tasarım deseni yazılım geliştirme süreçlerinde esneklik ve değişkenlik sağlayan önemli bir araç olarak karşımıza çıkmaktadır. Nesneler arasındaki ilişkilerin dinamik bir şekilde yönetilmesine olanak tanır ve sistemlerin daha modüler ve bakımının daha kolay olmasını sağlar. Bu desen, modern yazılım uygulamalarının geliştirilmesinde yaygın bir biçimde kullanılmaktadır. Bu nedenle, yazılım geliştiricilerin Observer tasarım desenini öğrenmeleri ve uygulamalarında kullanmaları oldukça faydalı olacaktır.
 
-***--------------------------------------------------------------------------------------------------***
+---
 
 Observer Design Pattern: A Powerful Tool Enabling Flexibility and Adaptability in Software Development Processes
 

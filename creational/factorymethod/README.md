@@ -14,7 +14,8 @@ Ancak elbette bu sihirli gücün bir sınırı var. Yaratılan nesnelerin ortak 
 **Sonuç:**
 Fabrika metodu aslında oldukça sihirli bir kavram. Kodu değiştirmeden yeni nesneler eklemeyi mümkün kılar. Yani aslında, "Şimdi bir gemi olmak istiyorum" demenizi sağlar. Bu sayede herkes istediği gibi taşımacılık yapabilir. Sanki biraz Hogwarts'a gitmiş gibi, değil mi?
 
-**--------------------------------------------------------------------------------------------------------**
+---
+
 Factory Method Pattern:
 
 The Factory Method pattern is actually quite extraordinary. It's a creational design pattern that allows subclasses to change the type of object being created while providing an interface for creating objects in the superclass. Essentially, it's like giving subclasses the ability to say, "I want to be a ship now."

@@ -10,7 +10,7 @@ Bu desen aynı zamanda kodun daha modüler ve bakımı kolay hale gelmesini de s
 
 ***Sonuç olarak,*** Strateji tasarım deseni navigasyon uygulamaları gibi karmaşık sistemlerde farklı rota bulma stratejilerinin yönetimini kolaylaştırır, kodun modülerliğini arttırır ve bakımını kolaylaştırır. Bu sayede, uygulama geliştiricileri farklı kullanıcı grupları için özelleştirilmiş rota bulma stratejilerini kolaylıkla entegre edebilir ve uygulamanın esnekliğini arttırabilirler.
 
-***----------------------------------------------------------------------------------------------------***
+---
 
 The strategy design pattern offers an approach that facilitates the management of complex algorithms encountered in the software development process. This pattern enables an object to define and encapsulate different algorithm families, making them replaceable. As a result, objects can independently vary their method of selecting a specific algorithm.
 

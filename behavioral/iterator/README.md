@@ -16,7 +16,7 @@ Iterator deseni, diğer tasarım desenleriyle de ilişkilidir. Örneğin, Compos
 
 Iterator tasarım deseni, programlamada koleksiyonların içeriğini dolaşırken kodun yapısından bağımsız olarak çalışmayı sağlayarak esneklik ve bakım kolaylığı sağlar. Bu desen, tekrarlı işlemler için güçlü ve genel bir çözüm sunar.
 
-***-----------------------------------------------------------------------------***
+---
 
 Iterator Design Pattern
 

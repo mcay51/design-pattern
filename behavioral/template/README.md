@@ -14,7 +14,7 @@ Eğer benzer uygulamalara sahip adımları bir üst sınıfa çekmek ve kod tekr
 
 Sonuç olarak, Template Method deseni sayesinde algoritmalarınızı esnek bir şekilde genişletebilir ve kod tekrarından kurtulabilirsiniz. Bu da sizi hem zamandan hem de baş ağrısından kurtarır. 
 
-***-------------------------------------------------------------------------***
+---
 
 Imagine you're developing a data mining application. Users feed documents in different formats (PDF, DOC, CSV) and try to extract meaningful data from these documents. Let's assume that at first you only work with DOC files. Then you make a decision: "Let's support CSV files too!" And a month later, you're thinking, "Why don't we extract data from PDF files?"
 

@@ -10,7 +10,7 @@ Bu desen, karmaşık dil yapılarını yorumlamak ve işlemek için uygun bir se
 
 Kısacası, interpreter tasarım deseni, belirli bir dilin semantiğini yorumlamak ve bu dildeki ifadeleri işlemek için etkili bir tasarım desenidir. Karmaşık dil yapılarının yorumlanması ve işlenmesi gereken durumlarda, bu desenin kullanımı yazılımın esnekliğini artırabilir ve karmaşık yapıları daha kolay yönetilebilir hale getirebilir. Bundan dolayı, interpreter tasarım deseninin yazılım geliştirme süreçlerinde önemli bir yerinin olduğunu vurgulayabiliriz.
 
-***---------------------------------------------------------***
+---
 
 Interpreter design pattern belongs to the behavioral group and is commonly used for cases where textual data, subject to specific rules, needs to be processed numerically or logically for rule execution engines. This pattern is utilized to interpret texts to perform a specific operation and is often preferred in areas such as language processing, database queries, or symbolic mathematical operations.
 

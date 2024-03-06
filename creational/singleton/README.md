@@ -10,7 +10,8 @@ Singleton Tasarım Deseni, diğer tasarım desenleriyle de ilişkilendirilmişti
 
 Sonuç olarak, Singleton Tasarım Deseni, programlama kurallarına uygun şekilde, tek bir görevle ilgilenerek ve herkesin aynı şeyi görmesini sağlayan  bir tasarım desenidir.
 
-------------------------------------------------
+---
+
 The Singleton Design Pattern, what's it about?
 
 The Singleton pattern is used to ensure that a class has only one instance and to provide a global point of access to it. This pattern is designed to resolve conflicts by focusing on a single responsibility in accordance with programming principles.
