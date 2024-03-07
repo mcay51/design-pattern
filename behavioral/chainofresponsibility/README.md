@@ -95,13 +95,13 @@ You should consider using the Responsibility Chain pattern if:
 In conclusion, the Responsibility Chain pattern offers a flexible solution for handling requests dynamically. When applied correctly, it can simplify your codebase, making it easier to maintain and scale, ultimately enhancing the efficiency and quality of your software development process.
 
 ---
+# Avans Ödeme Sistemi UML Diyagramı
 
 ```mermaid
 classDiagram
 direction BT
 class Calisan {
 + Calisan()
-# Calisan nextApprover
 + processRequest(double) void
   Calisan nextApprover
   }
@@ -121,3 +121,36 @@ class Calisan {
 Direktor  -->  Calisan
 GrupYoneticisi  -->  Calisan
 Yonetici  -->  Calisan 
+
+---
+# Authendication Örneği UML Diyagramı
+classDiagram
+direction BT
+class AuthenticationHandler {
+  + AuthenticationHandler(Handler) 
+  + handleRequest(Request) void
+}
+class CachingHandler {
+  + CachingHandler(Handler) 
+  + handleRequest(Request) void
+}
+class DataCleaningHandler {
+  + DataCleaningHandler(Handler) 
+  + handleRequest(Request) void
+}
+class Handler {
+<<Interface>>
+  + handleRequest(Request) void
+}
+class Request {
+  + Request(String) 
+   String data
+}
+
+AuthenticationHandler  ..>  Handler 
+AuthenticationHandler "1" *--> "nextHandler 1" Handler 
+CachingHandler  ..>  Handler 
+CachingHandler "1" *--> "nextHandler 1" Handler 
+DataCleaningHandler  ..>  Handler 
+DataCleaningHandler "1" *--> "nextHandler 1" Handler 
+

@@ -1,0 +1,29 @@
+classDiagram
+direction BT
+class AuthenticationHandler {
+  + AuthenticationHandler(Handler) 
+  + handleRequest(Request) void
+}
+class CachingHandler {
+  + CachingHandler(Handler) 
+  + handleRequest(Request) void
+}
+class DataCleaningHandler {
+  + DataCleaningHandler(Handler) 
+  + handleRequest(Request) void
+}
+class Handler {
+<<Interface>>
+  + handleRequest(Request) void
+}
+class Request {
+  + Request(String) 
+   String data
+}
+
+AuthenticationHandler  ..>  Handler 
+AuthenticationHandler "1" *--> "nextHandler 1" Handler 
+CachingHandler  ..>  Handler 
+CachingHandler "1" *--> "nextHandler 1" Handler 
+DataCleaningHandler  ..>  Handler 
+DataCleaningHandler "1" *--> "nextHandler 1" Handler 
