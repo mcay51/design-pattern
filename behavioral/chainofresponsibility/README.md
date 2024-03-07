@@ -124,7 +124,9 @@ GrupYoneticisi  -->  Calisan
 Yonetici  -->  Calisan 
 
 ---
+
 # Authendication Örneği UML Diyagramı
+
 
 ```mermaid
 classDiagram
