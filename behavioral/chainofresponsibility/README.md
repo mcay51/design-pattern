@@ -122,12 +122,10 @@ class Calisan {
 Direktor  -->  Calisan
 GrupYoneticisi  -->  Calisan
 Yonetici  -->  Calisan 
-
+```
 ---
 
 # Authendication Örneği UML Diyagramı
-
-
 ```mermaid
 classDiagram
 direction BT
@@ -158,4 +156,3 @@ CachingHandler  ..>  Handler
 CachingHandler "1" *--> "nextHandler 1" Handler 
 DataCleaningHandler  ..>  Handler 
 DataCleaningHandler "1" *--> "nextHandler 1" Handler 
-
