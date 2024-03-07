@@ -102,6 +102,7 @@ classDiagram
 direction BT
 class Calisan {
 + Calisan()
+# Calisan nextApprover
 + processRequest(double) void
   Calisan nextApprover
   }
@@ -124,6 +125,8 @@ Yonetici  -->  Calisan
 
 ---
 # Authendication Örneği UML Diyagramı
+
+```mermaid
 classDiagram
 direction BT
 class AuthenticationHandler {
