@@ -39,3 +39,89 @@ With this pattern, software developers do not need to create subclasses to modif
 ## Conclusion
 
 The Decorator design pattern is an important tool in the software development process, providing an effective and flexible way to modify object behaviors. Ideal for adding features and modifying existing ones in complex systems, the Decorator design pattern increases efficiency and ensures the maintainability of the code. Therefore, it is important for software developers to learn and use this design pattern.
+
+---
+
+# Maaş Hesaplama Örneği UML class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class GelirVergisiDecorator {
+  + GelirVergisiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class MaasDecorator {
+  + MaasDecorator(MaasHesaplama) 
+  + hesaplaMaas() double
+}
+class MaasHesaplama {
+<<Interface>>
+  + hesaplaMaas() double
+}
+class MesaiDecorator {
+  + MesaiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class PrimOdemesiDecorator {
+  + PrimOdemesiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class SSKPrimiDecorator {
+  + SSKPrimiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class TemelMaasHesaplama {
+  + TemelMaasHesaplama(double) 
+  + hesaplaMaas() double
+}
+
+GelirVergisiDecorator  -->  MaasDecorator 
+MaasDecorator  ..>  MaasHesaplama 
+MaasDecorator "1" *--> "maasHesaplama 1" MaasHesaplama 
+MesaiDecorator  -->  MaasDecorator 
+PrimOdemesiDecorator  -->  MaasDecorator 
+SSKPrimiDecorator  -->  MaasDecorator 
+TemelMaasHesaplama  ..>  MaasHesaplama 
+```
+# Bildirim Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Bildirim {
+<<Interface>>
+  + gonder(String) void
+}
+class BildirimDecorator {
+<<Interface>>
+
+}
+class FacebookDecorator {
+  + FacebookDecorator(Bildirim) 
+  + gonder(String) void
+}
+class SlackDecorator {
+  + SlackDecorator(Bildirim) 
+  + gonder(String) void
+}
+class SmsDecorator {
+  + SmsDecorator(Bildirim) 
+  + gonder(String) void
+}
+class TemelBildirim {
+  + TemelBildirim() 
+  + gonder(String) void
+}
+
+BildirimDecorator  -->  Bildirim 
+FacebookDecorator "1" *--> "temelBildirim 1" Bildirim 
+FacebookDecorator  ..>  BildirimDecorator 
+SlackDecorator "1" *--> "temelBildirim 1" Bildirim 
+SlackDecorator  ..>  BildirimDecorator 
+SmsDecorator "1" *--> "temelBildirim 1" Bildirim 
+SmsDecorator  ..>  BildirimDecorator 
+TemelBildirim  ..>  Bildirim 
+```
+
+

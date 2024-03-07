@@ -1,0 +1,38 @@
+classDiagram
+direction BT
+class GelirVergisiDecorator {
+  + GelirVergisiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class MaasDecorator {
+  + MaasDecorator(MaasHesaplama) 
+  + hesaplaMaas() double
+}
+class MaasHesaplama {
+<<Interface>>
+  + hesaplaMaas() double
+}
+class MesaiDecorator {
+  + MesaiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class PrimOdemesiDecorator {
+  + PrimOdemesiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class SSKPrimiDecorator {
+  + SSKPrimiDecorator(MaasHesaplama, double) 
+  + hesaplaMaas() double
+}
+class TemelMaasHesaplama {
+  + TemelMaasHesaplama(double) 
+  + hesaplaMaas() double
+}
+
+GelirVergisiDecorator  -->  MaasDecorator 
+MaasDecorator  ..>  MaasHesaplama 
+MaasDecorator "1" *--> "maasHesaplama 1" MaasHesaplama 
+MesaiDecorator  -->  MaasDecorator 
+PrimOdemesiDecorator  -->  MaasDecorator 
+SSKPrimiDecorator  -->  MaasDecorator 
+TemelMaasHesaplama  ..>  MaasHesaplama 

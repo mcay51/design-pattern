@@ -1,0 +1,35 @@
+classDiagram
+direction BT
+class Bildirim {
+<<Interface>>
+  + gonder(String) void
+}
+class BildirimDecorator {
+<<Interface>>
+
+}
+class FacebookDecorator {
+  + FacebookDecorator(Bildirim) 
+  + gonder(String) void
+}
+class SlackDecorator {
+  + SlackDecorator(Bildirim) 
+  + gonder(String) void
+}
+class SmsDecorator {
+  + SmsDecorator(Bildirim) 
+  + gonder(String) void
+}
+class TemelBildirim {
+  + TemelBildirim() 
+  + gonder(String) void
+}
+
+BildirimDecorator  -->  Bildirim 
+FacebookDecorator "1" *--> "temelBildirim 1" Bildirim 
+FacebookDecorator  ..>  BildirimDecorator 
+SlackDecorator "1" *--> "temelBildirim 1" Bildirim 
+SlackDecorator  ..>  BildirimDecorator 
+SmsDecorator "1" *--> "temelBildirim 1" Bildirim 
+SmsDecorator  ..>  BildirimDecorator 
+TemelBildirim  ..>  Bildirim 
