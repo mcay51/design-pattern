@@ -93,3 +93,31 @@ You should consider using the Responsibility Chain pattern if:
 - Conversely, when the request itself is a Command object, the same chain of operations is available in different contexts. In this scenario, the same chain of operations can be executed on different contexts along the same operation chain.
 
 In conclusion, the Responsibility Chain pattern offers a flexible solution for handling requests dynamically. When applied correctly, it can simplify your codebase, making it easier to maintain and scale, ultimately enhancing the efficiency and quality of your software development process.
+
+---
+
+```mermaid
+classDiagram
+direction BT
+class Calisan {
++ Calisan()
+# Calisan nextApprover
++ processRequest(double) void
+  Calisan nextApprover
+  }
+  class Direktor {
++ Direktor()
++ processRequest(double) void
+  }
+  class GrupYoneticisi {
++ GrupYoneticisi()
++ processRequest(double) void
+  }
+  class Yonetici {
++ Yonetici()
++ processRequest(double) void
+  }
+
+Direktor  -->  Calisan
+GrupYoneticisi  -->  Calisan
+Yonetici  -->  Calisan 
