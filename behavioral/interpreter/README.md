@@ -87,3 +87,40 @@ RoleExpression  ..>  Context
 # Roma Rakamı Örneği UML Class Diyagramı
 
 
+```mermaid
+classDiagram
+direction BT
+class AbstractExpression {
+<<Interface>>
+  + interpret(Context) int
+}
+class Context {
+  + Context() 
+  + getValue(char) int
+}
+class Interpreter {
+  + Interpreter() 
+  + evaluate(String) int
+  - parseExpression(String) AbstractExpression
+}
+class NonterminalExpression {
+  + NonterminalExpression(AbstractExpression, AbstractExpression) 
+  + interpret(Context) int
+}
+class TerminalExpression {
+  + TerminalExpression(char) 
+  + interpret(Context) int
+}
+
+AbstractExpression  ..>  Context 
+Interpreter  ..>  AbstractExpression 
+Interpreter  ..>  Context : «create»
+Interpreter  ..>  Interpreter 
+Interpreter  ..>  NonterminalExpression : «create»
+Interpreter  ..>  TerminalExpression : «create»
+NonterminalExpression  ..>  AbstractExpression 
+NonterminalExpression "1" *--> "leftExpression 1" AbstractExpression 
+NonterminalExpression  ..>  Context 
+TerminalExpression  ..>  AbstractExpression 
+TerminalExpression  ..>  Context 
+```
