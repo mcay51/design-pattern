@@ -31,3 +31,31 @@ The Proxy design pattern has a wide range of applicability areas. It can be used
 ## Conclusion
 
 The Proxy design pattern is a powerful tool for addressing various problems such as access control and performance optimization in complex systems. When applied correctly, it makes systems more modular, flexible, and efficient.
+
+---
+
+# Dosya Okuma Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class DosyaOkuma {
+<<Interface>>
++ dosyaOku() void
+  }
+  class GercekDosyaOkuma {
++ GercekDosyaOkuma(String)
+- String dosyaAdi
++ dosyaOku() void
+  String dosyaAdi
+  }
+  class ProxyDosyaOkuma {
++ ProxyDosyaOkuma(String, int)
++ dosyaOku() void
+  }
+
+GercekDosyaOkuma  ..>  DosyaOkuma
+ProxyDosyaOkuma  ..>  DosyaOkuma
+ProxyDosyaOkuma  ..>  GercekDosyaOkuma : «create»
+ProxyDosyaOkuma "1" *--> "gercekDosyaOkuma 1" GercekDosyaOkuma 
+```

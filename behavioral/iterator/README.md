@@ -1,4 +1,4 @@
-***Iterator Tasarım Deseni***
+# Iterator Tasarım Deseni
 
 Iterator tasarım deseni, bir koleksiyonun öğelerini tiplerinden bağımsız olarak (liste, yığın, ağaç vb.) tarayarak tekrarlı bir işlem yapmak istediğimiz durumlarda kullanılır. Bu desen, koleksiyonların içeriğini dolaşırken koleksiyonun yapısından bağımsız olarak kod yazmamızı sağlar.
 
@@ -18,7 +18,7 @@ Iterator tasarım deseni, programlamada koleksiyonların içeriğini dolaşırke
 
 ---
 
-Iterator Design Pattern
+# Iterator Design Pattern
 
 The Iterator design pattern is used when we want to perform repetitive operations by traversing the elements of a collection independently of their types (list, stack, tree, etc.). This pattern allows us to write code that traverses the contents of collections regardless of their structure.
 
@@ -35,3 +35,38 @@ We can use the Iterator pattern in the following situations:
 The Iterator pattern is also related to other design patterns. For example, we can use iterators to traverse trees in the Composite pattern. Additionally, we can combine the Iterator and Factory Method patterns to allow collection subclasses to return different types of iterators.
 
 By allowing code to traverse the contents of collections independently of the code's structure, the Iterator design pattern provides flexibility and ease of maintenance. It offers a robust and general solution for repetitive operations.
+
+---
+
+# Iterator Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class ConcreteAggregate~T~ {
++ ConcreteAggregate()
++ createIterator() MyIterator~T~
++ addItem(T) void
+  }
+  class ConcreteIterator~T~ {
++ ConcreteIterator(List~T~)
++ hasNext() boolean
++ next() T
+  }
+  class MyAggregate~T~ {
+  <<Interface>>
++ createIterator() MyIterator~T~
+  }
+  class MyIterator~T~ {
+  <<Interface>>
++ hasNext() boolean
++ next() T
+  }
+
+ConcreteAggregate~T~  ..>  ConcreteIterator~T~ : «create»
+ConcreteAggregate~T~  ..>  MyAggregate~T~
+ConcreteAggregate~T~  ..>  MyIterator~T~
+ConcreteIterator~T~  ..>  ConcreteIterator~T~
+ConcreteIterator~T~  ..>  MyIterator~T~
+MyAggregate~T~  ..>  MyIterator~T~ 
+```

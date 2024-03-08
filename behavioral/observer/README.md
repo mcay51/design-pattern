@@ -1,18 +1,18 @@
-*** Observer Tasarım Deseni:*** Yazılım Geliştirme Süreçlerinde Esneklik ve Değişkenlik Sağlayan Güçlü Bir Araç
+## Observer Tasarım Deseni: Yazılım Geliştirme Süreçlerinde Esneklik ve Değişkenlik Sağlayan Güçlü Bir Araç
 
-Günümüz yazılım geliştirme süreçlerinde, değişkenlik ve esneklik kritik öneme sahiptir. Bu süreçte, nesneler arasındaki ilişkilerin dinamik olarak yönetilmesi ve sistemlerin daha modüler olması, bakımının kolaylaştırılması gerekmektedir. Observer tasarım deseni, bu ihtiyaçları karşılamak amacıyla kullanılan etkili bir araçtır.
+Günümüz yazılım geliştirme süreçlerinde, değişkenlik ve esneklik kritik öneme sahiptir. Bu süreçte, nesneler arasındaki ilişkilerin dinamik olarak yönetilmesi ve sistemlerin daha modüler olması, bakımının kolaylaştırılması gerekmektedir. Bu ihtiyaçları karşılamak amacıyla kullanılan etkili bir araç ise **Observer** tasarım desenidir.
 
 Observer tasarım deseni, bir nesnenin durumundaki değişiklikleri takip eden ve bu değişiklerden etkilenen diğer nesnelere bilgilendirme sağlayan bir mekanizmayı temsil eder. Temelde, bir nesne (yayıncı), durumundaki değişiklikleri diğer nesnelere (abonelere) bildirir. Bu sayede, dinamik ve esnek sistemlerin oluşturulmasına olanak tanır.
 
-***Mesela,*** bir müşterinin belirli bir ürünün piyasaya sürülmesini beklediğini düşünelim. Müşteri her gün mağazaya gelerek ürünün durumunu kontrol eder. Ancak ürün henüz gelmemişse, bu ziyaretler zaman kaybı olabilir. Diğer yandan, mağaza her yeni ürün geldiğinde tüm müşterilere bildirim gönderirse, aşırı iletişim ve spam oluşturabilir.
+Örneğin, bir müşterinin belirli bir ürünün piyasaya sürülmesini beklediğini düşünelim. Müşteri her gün mağazaya gelerek ürünün durumunu kontrol eder. Ancak ürün henüz gelmemişse, bu ziyaretler zaman kaybı olabilir. Diğer yandan, mağaza her yeni ürün geldiğinde tüm müşterilere bildirim gönderirse, aşırı iletişim ve spam oluşturabilir.
 
-***Observer tasarım deseni,*** bu sorunu çözmek için ideal bir seçenektir. Yayıncı (örneğin, mağaza), durumundaki herhangi bir değişiklik olduğunda, abonelere (müşterilere) bildirim gönderir. Böylece, müşteriler gereksiz ziyaretlerden kaçınır ve mağaza gereksiz iletişimden kaçınır.
+Observer tasarım deseni, bu sorunu çözmek için ideal bir seçenektir. Yayıncı (örneğin, mağaza), durumundaki herhangi bir değişiklik olduğunda, abonelere (müşterilere) bildirim gönderir. Böylece, müşteriler gereksiz ziyaretlerden kaçınır ve mağaza gereksiz iletişimden kaçınır.
 
-Observer tasarım deseni genellikle kullanıcı arayüzü gibi dinamik ve değişken sistemlerle çalışırken kullanılır. Ayrıca, bir nesnenin durumu başka nesneleri etkilemelidir, ancak bu nesnelerin önceden bilinmemesi durumunda da kullanılabilir. Abonelik listesi dinamik olduğundan, aboneler istedikleri zaman abone olabilir veya abonelikten çıkabilir.
+Bu desen genellikle kullanıcı arayüzü gibi dinamik ve değişken sistemlerle çalışırken kullanılır. Ayrıca, bir nesnenin durumu başka nesneleri etkilemelidir, ancak bu nesnelerin önceden bilinmemesi durumunda da kullanılabilir. Abonelik listesi dinamik olduğundan, aboneler istedikleri zaman abone olabilir veya abonelikten çıkabilir.
 
-Observer tasarım deseni, Chain of Responsibility, Command, Mediator gibi diğer tasarım desenleriyle ilişkilidir. Her biri alıcıları ve göndericileri birbirine bağlama konusunda farklı yöntemler sunar. Mediator ve Observer arasındaki fark zaman zaman belirsiz olabilir, ancak her birinin farklı kullanım alanları bulunmaktadır.
+Observer tasarım deseni, **Chain of Responsibility**, **Command**, **Mediator** gibi diğer tasarım desenleriyle ilişkilidir. Her biri alıcıları ve göndericileri birbirine bağlama konusunda farklı yöntemler sunar. Mediator ve Observer arasındaki fark zaman zaman belirsiz olabilir, ancak her birinin farklı kullanım alanları bulunmaktadır.
 
-***Sonuç olarak,*** Observer tasarım deseni yazılım geliştirme süreçlerinde esneklik ve değişkenlik sağlayan önemli bir araç olarak karşımıza çıkmaktadır. Nesneler arasındaki ilişkilerin dinamik bir şekilde yönetilmesine olanak tanır ve sistemlerin daha modüler ve bakımının daha kolay olmasını sağlar. Bu desen, modern yazılım uygulamalarının geliştirilmesinde yaygın bir biçimde kullanılmaktadır. Bu nedenle, yazılım geliştiricilerin Observer tasarım desenini öğrenmeleri ve uygulamalarında kullanmaları oldukça faydalı olacaktır.
+Sonuç olarak, Observer tasarım deseni yazılım geliştirme süreçlerinde esneklik ve değişkenlik sağlayan önemli bir araç olarak karşımıza çıkmaktadır. Nesneler arasındaki ilişkilerin dinamik bir şekilde yönetilmesine olanak tanır ve sistemlerin daha modüler ve bakımının daha kolay olmasını sağlar. Bu desen, modern yazılım uygulamalarının geliştirilmesinde yaygın bir biçimde kullanılmaktadır. Bu nedenle, yazılım geliştiricilerin Observer tasarım desenini öğrenmeleri ve uygulamalarında kullanmaları oldukça faydalı olacaktır.
 
 ---
 
@@ -31,3 +31,40 @@ The observer design pattern is commonly used when working with dynamic and varia
 The observer design pattern is related to other design patterns like Chain of Responsibility, Command, and Mediator. Each of these patterns offers different methods for connecting senders and receivers. The difference between Mediator and Observer patterns can sometimes be unclear, but they have different use cases.
 
 In conclusion, the observer design pattern emerges as an important tool in software development processes, providing flexibility and adaptability. It enables the dynamic management of relationships between objects and facilitates the creation of more modular and easily maintainable systems. This pattern is widely used in modern software applications. Therefore, learning and implementing the Observer design pattern can be highly beneficial for software developers.
+
+---
+
+# Store Stock Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Customer {
+  + Customer(String) 
+  + update(String, int) void
+}
+class Observer {
+<<Interface>>
+  + update(String, int) void
+}
+class Store {
+  + Store(String, int) 
+  - int stockCount
+  + notifyObservers() void
+  + removeObserver(Observer) void
+  + addObserver(Observer) void
+   int stockCount
+}
+class Subject {
+<<Interface>>
+  + removeObserver(Observer) void
+  + addObserver(Observer) void
+  + notifyObservers() void
+}
+
+Customer  ..>  Observer 
+Store "1" *--> "observers *" Observer 
+Store  ..>  Store 
+Store  ..>  Subject 
+Subject  ..>  Observer 
+```

@@ -1,4 +1,6 @@
-***Interpreter Tasarım Deseni :*** İşlevselliğine ait, belirli kurallara bağlı olan yazılı metinlerin sayısal veya mantıksal olarak işlenmesi gereken durumlarda ve kural işletme motorları için sıkça kullanılan bir tasarım deseni olan Interpreter, behavior grubuna aittir. Bu desen, metinleri yorumlayarak belirli bir işlemi gerçekleştirmek üzere kullanılır ve genellikle dil işleme, veri tabanı sorguları veya simgesel matematiksel işlemler gibi alanlarda tercih edilir.
+# Interpreter Tasarım Deseni : 
+
+İşlevselliğine ait, belirli kurallara bağlı olan yazılı metinlerin sayısal veya mantıksal olarak işlenmesi gereken durumlarda ve kural işletme motorları için sıkça kullanılan bir tasarım deseni olan Interpreter, behavior grubuna aittir. Bu desen, metinleri yorumlayarak belirli bir işlemi gerçekleştirmek üzere kullanılır ve genellikle dil işleme, veri tabanı sorguları veya simgesel matematiksel işlemler gibi alanlarda tercih edilir.
 
 Interpreter tasarım deseninin temel amacı, belirli bir dilin semantiğini yorumlamak ve bu dildeki ifadeleri işlemektir. Bu desen genellikle bir dil işleyici oluşturmak için kullanılır, bu sayede belirli bir dildeki ifadelerin yorumlanması ve işlenmesi mümkün hale gelir.
 
@@ -23,3 +25,65 @@ Considering two different types of expressions named TerminalExpression and Nont
 This pattern is a suitable option for interpreting and processing complex language structures, and can be used in various fields beyond language processing, such as database queries or mathematical expressions. Interpreting and processing the semantic structures of a specific language can be easily accomplished through this pattern.
 
 In summary, the interpreter design pattern is an effective design pattern for interpreting the semantics of a specific language and processing expressions in that language. In cases where complex language structures need to be interpreted and processed, the use of this pattern can increase the flexibility of software and make complex structures more manageable. Therefore, it can be emphasized that the interpreter design pattern has an important place in software development processes.
+
+---
+
+# Job Expression Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class ArtistExpression {
+  + ArtistExpression() 
+  + interpret(Context) void
+}
+class Context {
+  + Context() 
+  - String formula
+  - int totalPoint
+   int totalPoint
+   String formula
+}
+class DoctorExpression {
+  + DoctorExpression() 
+  + interpret(Context) void
+}
+class EngineerExpression {
+  + EngineerExpression() 
+  + interpret(Context) void
+}
+class Expression {
+  + Expression() 
+  + runExpression(Context) void
+  ~ createExpressionTree(String) List~RoleExpression~
+}
+class LawyerExpression {
+  + LawyerExpression() 
+  + interpret(Context) void
+}
+class RoleExpression {
+  + RoleExpression() 
+  ~ interpret(Context) void
+}
+
+ArtistExpression  ..>  Context 
+ArtistExpression  -->  RoleExpression 
+DoctorExpression  ..>  Context 
+DoctorExpression  -->  RoleExpression 
+EngineerExpression  ..>  Context 
+EngineerExpression  -->  RoleExpression 
+Expression  ..>  ArtistExpression : «create»
+Expression  ..>  Context 
+Expression  ..>  DoctorExpression : «create»
+Expression  ..>  EngineerExpression : «create»
+Expression  ..>  Expression 
+Expression  ..>  LawyerExpression : «create»
+Expression  ..>  RoleExpression 
+LawyerExpression  ..>  Context 
+LawyerExpression  -->  RoleExpression 
+RoleExpression  ..>  Context 
+```
+
+# Roma Rakamı Örneği UML Class Diyagramı
+
+

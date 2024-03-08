@@ -23,3 +23,44 @@ For example, initially, route finding strategies may be developed exclusively fo
 Additionally, this pattern also facilitates making the code more modular and easier to maintain. Each route finding strategy is defined as a separate class, allowing each strategy to be independently tested and maintained.
 
 In conclusion, the strategy design pattern simplifies the management of different route finding strategies, enhances the modularity of the code, and eases maintenance, particularly in complex systems such as navigation applications. Consequently, application developers can easily integrate customized route finding strategies for different user groups and enhance the application's flexibility.
+
+---
+
+# Rota Bulma Uygulaması UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class ArabaRotaBulucu {
+  + ArabaRotaBulucu() 
+  + rotaBul(String, String) void
+}
+class BisikletRotaBulucu {
+  + BisikletRotaBulucu() 
+  + rotaBul(String, String) void
+}
+class NavigasyonUygulamasi {
+  + NavigasyonUygulamasi() 
+  - RotaBulucu rotaBulucu
+  + rotaBul(String, String) void
+   RotaBulucu rotaBulucu
+}
+class RotaBulucu {
+<<Interface>>
+  + rotaBul(String, String) void
+}
+class TopluTasimaRotaBulucu {
+  + TopluTasimaRotaBulucu() 
+  + rotaBul(String, String) void
+}
+class YurumeRotaBulucu {
+  + YurumeRotaBulucu() 
+  + rotaBul(String, String) void
+}
+
+ArabaRotaBulucu  ..>  RotaBulucu 
+BisikletRotaBulucu  ..>  RotaBulucu 
+NavigasyonUygulamasi "1" *--> "rotaBulucu 1" RotaBulucu 
+TopluTasimaRotaBulucu  ..>  RotaBulucu 
+YurumeRotaBulucu  ..>  RotaBulucu 
+```

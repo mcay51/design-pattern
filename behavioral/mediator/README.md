@@ -1,16 +1,18 @@
-Yazılım geliştirme süreçlerinde, objeler arasındaki kompleks bağımlılıkları organize etmek ve yönetmek büyük bir zorluk oluşturur. Bu zorluğun üstesinden gelmek için ***Mediator (Ortak)*** tasarım deseni geliştirilmiştir. Bu desen, objeler arasındaki etkileşimi düzenleyerek sistemi daha modüler ve bakımını daha kolay hale getirir. Mediator deseni, karmaşıklığı azaltmak için doğrudan iletişimi kısıtlayarak, objeler arasındaki iletişimi tek bir aracı üzerinden sağlar.
+## Mediator Design Pattern
 
-Örnek bir durumla açıklamak gerekirse, müşteri profilleri oluşturmak ve düzenlemek için bir diyalog arayüzü geliştirdiğinizi düşünelim. Arayüzde metin alanları, işaret kutuları, düğmeler gibi pek çok eleman bulunmaktadır. Geliştirme sürecinin ilerlemesiyle birlikte, arayüz elemanları arasındaki ilişkiler karmaşık bir hal alabilir. Örneğin, bir işaret kutusunu seçtiğinizde başka bir alanın görünür hale gelmesi gerekebilir ya da veri göndermeden önce belirli kontroller yapılması gerekebilir.
+Yazılım geliştirme süreçlerinde, objeler arasındaki karmaşık bağımlılıkları organize etmek ve yönetmek zorlayıcı bir görev olabilir. Bu zorluğun üstesinden gelmek için **Mediator (Ortak)** tasarım deseni geliştirilmiştir. Bu desen, objeler arasındaki etkileşimi düzenleyerek sistemleri daha modüler ve bakımı daha kolay hale getirir. Mediator deseni, doğrudan iletişimi kısıtlayarak karmaşıklığı azaltır ve objeler arasındaki iletişimi tek bir aracı üzerinden sağlar.
 
-Bu tür etkileşimlerin doğrudan kod içine entegre edilmesi, kod karmaşıklığını artırır ve yeniden kullanılabilirliği azaltır. İşte burada Mediator deseninin önemi ortaya çıkar. Mediator, objeler arasındaki doğrudan iletişimi keser ve tek bir aracı üzerinden iletişimi güvence altına alır. Bu sayede objeler, birbirlerine doğrudan bağımlı olmak yerine Mediator aracılığıyla iş birliği yaparlar. Bu da sistemi daha modüler ve bakım işlemlerini daha kolay hale getirir.
+Örnek bir senaryo düşünelim: Müşteri profillerini oluşturmak ve düzenlemek için bir diyalog arayüzü geliştiriyorsunuz. Arayüzde metin alanları, işaret kutuları, düğmeler gibi birçok bileşen bulunmaktadır. Geliştirme sürecinin ilerlemesiyle birlikte, bu bileşenler arasındaki ilişkiler karmaşık hale gelebilir. Örneğin, bir işaret kutusunu seçtiğinizde başka bir alanın görünür hale gelmesi gerekebilir veya veri göndermeden önce belirli kontroller yapılması gerekebilir.
 
-Mediator deseninin kullanımının gözlemlendiği durumlarda, sıkı bağlı olan sınıfların esneklik kazandığı, yeniden kullanılabilirliğin arttığı ve karmaşıklığın azaldığı bir yaygın durum oluşur. Ayrıca, değişikliklerin daha kolay uygulanabilmesi ve bakımın daha düşük zaman ayırması da dikkate değer avantajlardır.
+Bu tür etkileşimlerin doğrudan kod içine entegre edilmesi, kod karmaşıklığını artırabilir ve yeniden kullanılabilirliği azaltabilir. İşte burada Mediator deseninin önemi ortaya çıkar. Mediator, objeler arasındaki doğrudan iletişimi keser ve tek bir aracı üzerinden iletişimi sağlar. Bu sayede objeler, birbirlerine doğrudan bağımlı olmak yerine Mediator aracılığıyla iş birliği yaparlar. Bu da sistemi daha modüler hale getirir ve bakım işlemlerini kolaylaştırır.
+
+Mediator deseninin kullanıldığı durumlarda, sıkı bağlı olan sınıfların esneklik kazandığı, yeniden kullanılabilirliğin arttığı ve karmaşıklığın azaldığı gözlemlenir. Ayrıca, değişikliklerin daha kolay uygulanabilmesi ve bakımın daha az zaman alması gibi avantajlar da sağlanır.
 
 Örnek olarak, bir form elemanının davranışını değiştirmek istediğinizde, bu değişikliği doğrudan form elemanının koduna eklemek yerine Mediator üzerinden gerçekleştirebilirsiniz. Böylelikle, diğer form elemanlarına olan etkileşimi minimize eder ve kodun daha düzenli olmasını sağlarsınız.
 
-Mediator deseni, Chain of Responsibility, Command, Observer gibi diğer tasarım desenleriyle ilişkili olarak ve birlikte kullanılabilir bir yapıya sahiptir. Örneğin, isteğin dinamik olarak birden fazla alıcıya ulaştırılmasını sağlayan Chain of Responsibility deseniyle beraber kullanılabilir. Benzer şekilde, Observer deseniyle birlikte kullanılarak dinamik abone olma mekanizmaları oluşturulabilir.
+Mediator deseni, Chain of Responsibility, Command, Observer gibi diğer tasarım desenleriyle ilişkilidir ve birlikte kullanılabilir. Örneğin, isteğin dinamik olarak birden fazla alıcıya ulaştırılmasını sağlayan Chain of Responsibility deseniyle birlikte kullanılabilir. Benzer şekilde, Observer deseniyle birlikte kullanılarak dinamik abonelik mekanizmaları oluşturulabilir.
 
-Sonuç olarak, Mediator tasarım deseni, yazılım geliştirme süreçlerinde objeler arasındaki karmaşıklığı azaltmak ve sistemi daha modüler hale getirmek için güçlü bir çözüm sunmaktadır. Doğru şekilde uygulandığında, daha temiz, düzenli ve bakımı kolay bir kod yapısının oluşmasına katkı sağlar. Bu da geliştirme süreçlerini daha verimli hale getirir ve yazılımın kalitesini artırır.
+Sonuç olarak, Mediator tasarım deseni, yazılım geliştirme süreçlerinde objeler arasındaki karmaşıklığı azaltmak ve sistemleri daha modüler hale getirmek için güçlü bir çözüm sunar. Doğru şekilde uygulandığında, daha temiz, düzenli ve bakımı kolay bir kod yapısı sağlar. Bu da geliştirme süreçlerini daha verimli hale getirir ve yazılımın kalitesini artırır.
 
 ---
 
@@ -27,3 +29,96 @@ For example, when you want to change the behavior of a form element, you can ach
 The Mediator pattern is associated with other design patterns such as Chain of Responsibility, Command, and Observer, and can be used together in a complementary manner. For instance, it can be combined with the Chain of Responsibility pattern to dynamically deliver requests to multiple recipients. Similarly, when used with the Observer pattern, dynamic subscription mechanisms can be created.
 
 In conclusion, the Mediator design pattern offers a robust solution to reduce complexity between objects and make the system more modular in software development processes. When applied correctly, it contributes to the creation of a cleaner, more organized, and easier-to-maintain code structure. This, in turn, enhances the efficiency of development processes and improves the quality of the software.
+
+---
+
+# Messenger Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Member {
+  + Member(String) 
+  - String memberName
+  - MessageService messageService
+  + sendMessage(String, String) void
+  + reciveMessage(String, String) void
+   MessageService messageService
+   String memberName
+   MessageService messageServiceMediator
+}
+class MessageService {
+  + MessageService() 
+  + sendMessage(String, String, String) void
+  + register(Member) void
+}
+class MessageServiceMediator {
+<<Interface>>
+  + register(Member) void
+  + sendMessage(String, String, String) void
+}
+class Messenger {
+  + Messenger(String) 
+  + reciveMessage(String, String) void
+}
+
+Member "1" *--> "messageService 1" MessageService 
+MessageService "1" *--> "members *" Member 
+MessageService  ..>  MessageServiceMediator 
+MessageServiceMediator  ..>  Member 
+Messenger  -->  Member 
+```
+
+# UI Form Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Button {
+  + Button(DialogMediator) 
+  + controlChanged() void
+}
+class CheckBox {
+  + CheckBox(DialogMediator) 
+  - boolean isChecked
+  + controlChanged() void
+   boolean isChecked
+}
+class Dialog {
+  + Dialog() 
+  - TextBox textBox
+  - CheckBox checkBox
+  - Button button
+  + notify(String) void
+   Button button
+   CheckBox checkBox
+   TextBox textBox
+}
+class DialogMediator {
+<<Interface>>
+  + notify(String) void
+}
+class TextBox {
+  + TextBox(DialogMediator) 
+  - boolean isVisible
+  + controlChanged() void
+   boolean isVisible
+}
+class UIControl {
+<<Interface>>
+  + controlChanged() void
+}
+
+Button "1" *--> "mediator 1" DialogMediator 
+Button  ..>  UIControl 
+CheckBox  ..>  CheckBox 
+CheckBox "1" *--> "mediator 1" DialogMediator 
+CheckBox  ..>  UIControl 
+Dialog "1" *--> "button 1" Button 
+Dialog "1" *--> "checkBox 1" CheckBox 
+Dialog  ..>  DialogMediator 
+Dialog "1" *--> "textBox 1" TextBox 
+TextBox "1" *--> "mediator 1" DialogMediator 
+TextBox  ..>  TextBox 
+TextBox  ..>  UIControl 
+```

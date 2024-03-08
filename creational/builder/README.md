@@ -31,3 +31,79 @@ And of course, let's not forget about the Director class! This class determines 
 The Builder pattern also helps you get rid of telescopic configuration. You no longer have to send dozens of parameters. You can create objects step by step by calling only the required steps.
 
 Beyond all this, the Builder pattern provides a great guide to reducing complexity. By progressing step by step, you can create the object you want and avoid unnecessary complexities. Remember, you don't have to handle everything at once; by following the steps, you can achieve the desired result. So, with the Builder pattern, you can overcome the complexity in the object creation process!
+
+---
+# House Builder build
+
+```mermaid
+classDiagram
+direction BT
+class Builder {
+  + Builder() 
+  + walls(String) Builder
+  + windows(String) Builder
+  + door(String) Builder
+  + extras(String) Builder
+  + roof(String) Builder
+  + build() House
+}
+class House {
+  - House(Builder) 
+  + toString() String
+}
+
+Builder  ..>  Builder 
+House  -->  Builder 
+Builder  ..>  House : «create»
+House  ..>  Builder 
+```
+
+# House Builder Director UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Director {
+  + Director(HouseBuilder) 
+  + constructHouse() void
+}
+class House {
+  + House(String, String, String, String, String) 
+  - String extras
+  - String walls
+  - String windows
+  - String roof
+  - String door
+  + toString() String
+   String windows
+   String roof
+   String extras
+   String door
+   String walls
+}
+class HouseBuilder {
+<<Interface>>
+  + buildDoor() void
+  + buildWindows() void
+  + buildExtras() void
+  + buildWalls() void
+  + buildRoof() void
+   House house
+}
+class SimpleHouseBuilder {
+  + SimpleHouseBuilder() 
+  - House house
+  + buildDoor() void
+  + buildRoof() void
+  + buildWindows() void
+  + buildExtras() void
+  + buildWalls() void
+   House house
+}
+
+Director "1" *--> "houseBuilder 1" HouseBuilder 
+HouseBuilder  ..>  House 
+SimpleHouseBuilder  ..>  House : «create»
+SimpleHouseBuilder "1" *--> "house 1" House 
+SimpleHouseBuilder  ..>  HouseBuilder 
+```

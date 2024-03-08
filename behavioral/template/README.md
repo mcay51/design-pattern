@@ -1,31 +1,81 @@
-***Template Design Pattern***
+## Template Tasarım Deseni
 
-Bir veri madenciliği uygulaması geliştirdiğinizi hayal edin. Kullanıcılar, belgeleri farklı biçimlerde (PDF, DOC, CSV) besler ve bu belgelerden anlamlı veriler çıkarmaya çalışır. İlk başta sadece DOC dosyalarıyla çalıştığınızı farz edelim. Sonra bir karar verirsiniz: "CSV dosyalarını da destekleyelim!" Ve bir ay sonra da "Neden PDF dosyalarından veri çıkarmıyoruz ki?" diye düşünürsünüz.
+Veri madenciliği uygulamaları geliştiren biri olarak, belgeleri farklı biçimlerde (PDF, DOC, CSV) beslemek ve bu belgelerden anlamlı veriler çıkarmak üzerine çalıştığımızı düşünelim. Başlangıçta sadece DOC dosyalarıyla çalıştığımızı farz edelim. Ancak daha sonra bir karar vererek "CSV dosyalarını da destekleyelim!" dediğimizi ve bir ay sonra da "Neden PDF dosyalarından veri çıkarmıyoruz ki?" diye düşündüğümüzü varsayalım.
 
-İşte tam bu noktada Template Method devreye girer! Bu tasarım deseni, algoritmanın iskeletini oluşturarak, alt sınıfların belirli adımlarını değiştirmesine olanak tanır. Yani aynı temel algoritmayı kullanarak farklı adımları değiştirebilirsiniz. Tek bir şablon yöntemi içerisinde tüm adımları bir araya getirerek, kod tekrarından kurtulmanızı sağlar.
+İşte tam bu noktada Şablon Yöntemi devreye girer! Bu tasarım deseni, algoritmanın iskeletini oluşturarak, alt sınıfların belirli adımlarını değiştirmesine olanak tanır. Yani aynı temel algoritmayı kullanarak farklı adımları değiştirebilirsiniz. Tek bir şablon yöntemi içerisinde tüm adımları bir araya getirerek, kod tekrarından kurtulmanızı sağlar.
 
-Peki nasıl mı? Öncelikle, belge işleme adımlarını içeren bir temel sınıf oluşturursunuz. Bu sınıf, çeşitli belge işleme adımlarına yönelik bir dizi çağrıdan oluşan bir şablon yöntemi tanımlar. Sonra da alt sınıfları bu temel şablonu kullanmaya zorlarsınız. Böylece her alt sınıf, kendi uygulamalarını belirlerken, temel algoritmayı korumuş olursunuz.
+Temel olarak, belge işleme adımlarını içeren bir temel sınıf oluştururuz. Bu sınıf, çeşitli belge işleme adımlarına yönelik bir dizi çağrıdan oluşan bir şablon yöntemi tanımlar. Sonra da alt sınıfları bu temel şablonu kullanmaya zorlarız. Böylece her alt sınıf, kendi uygulamalarını belirlerken, temel algoritmayı korumuş oluruz.
 
-Ayrıca, ham verileri analiz etmek ve raporları oluşturmak gibi ortak adımları temel sınıfa çekerek, tekrarlanan kodlardan kurtulabilirsiniz. Bu sayede, farklı veri formatları için değişen kodlar alt sınıflarda kalırken, ortak adımları tek bir yerde tutabilirsiniz.
+Ayrıca, ham verileri analiz etmek ve raporları oluşturmak gibi ortak adımları temel sınıfa çekerek, tekrarlanan kodlardan kurtulabiliriz. Bu sayede, farklı veri formatları için değişen kodlar alt sınıflarda kalırken, ortak adımları tek bir yerde tutabiliriz.
 
-Template Method deseni sayesinde, algoritmayı genişletmek istediğinizde tüm yapıyı değiştirmek zorunda kalmazsınız. İstemcilerin yalnızca belirli adımları genişletmesine izin verir ve üst sınıfın yapısının değişmemesini garanti altına alır.
+Şablon Yöntemi deseni sayesinde, algoritmayı genişletmek istediğimizde tüm yapıyı değiştirmek zorunda kalmayız. İstemcilerin yalnızca belirli adımları genişletmesine izin verir ve üst sınıfın yapısının değişmemesini garanti altına alır.
 
-Eğer benzer uygulamalara sahip adımları bir üst sınıfa çekmek ve kod tekrarını ortadan kaldırmak istiyorsanız, Template Method tasarım desenini mutlaka düşünmelisiniz.
+Eğer benzer uygulamalara sahip adımları bir üst sınıfa çekmek ve kod tekrarını ortadan kaldırmak istiyorsanız, Şablon Yöntemi tasarım desenini mutlaka düşünmelisiniz.
 
-Sonuç olarak, Template Method deseni sayesinde algoritmalarınızı esnek bir şekilde genişletebilir ve kod tekrarından kurtulabilirsiniz. Bu da sizi hem zamandan hem de baş ağrısından kurtarır. 
+Sonuç olarak, Şablon Yöntemi deseni sayesinde algoritmalarınızı esnek bir şekilde genişletebilir ve kod tekrarından kurtulabilirsiniz. Bu da sizi hem zamandan hem de baş ağrısından kurtarır.
+
+Bu tasarım deseni, veri madenciliği uygulamalarında büyük önem taşımaktadır ve uygulamalarımızın daha esnek ve yönetilebilir olmasını sağlar. Şablon Yöntemi deseni ile algoritmalarımızın genişlemesini kolaylaştırabilir ve verimliliği artırabiliriz. Umarım bu yazı, Şablon Yöntemi deseninin ne olduğunu anlamanıza yardımcı olmuştur.
+
 
 ---
 
-Imagine you're developing a data mining application. Users feed documents in different formats (PDF, DOC, CSV) and try to extract meaningful data from these documents. Let's assume that at first you only work with DOC files. Then you make a decision: "Let's support CSV files too!" And a month later, you're thinking, "Why don't we extract data from PDF files?"
+## Template Design Pattern
 
-That's where the Template Method comes in! This design pattern creates the skeleton of the algorithm, allowing it to modify certain steps of subclasses. That is, you can modify different steps using the same basic algorithm. By combining all the steps in a single template method, it allows you to get rid of code duplication.
+As someone developing data mining applications, imagine working on feeding documents in different formats (PDF, DOC, CSV) and extracting meaningful data from these documents. Let's say initially we only work with DOC files. However, later on, we decide to "Let's support CSV files too!" and a month later, we think "Why not extract data from PDF files as well?"
 
-How? First, you create a base class that contains the steps for document processing. This class defines a template method that consists of a series of calls to various document processing steps. Then you force the subclasses to use this basic template. That way, each subclass determines its own implementations, while maintaining the underlying algorithm.
+This is where the Template Method comes into play! This design pattern creates the skeleton of an algorithm, allowing subclasses to alter specific steps. In other words, you can change different steps while using the same basic algorithm. By encapsulating all steps within a single template method, it helps eliminate code repetition.
 
-You can also avoid repetitive code by pulling common steps, such as analyzing raw data and generating reports, into the base class. In this way, you can keep common steps in one place while changing codes for different data formats remain in subclasses.
+Essentially, we create a base class that contains document processing steps. This class defines a template method consisting of a series of calls to various document processing steps. Then, we force subclasses to use this base template. This way, while each subclass determines its own implementations, we maintain the basic algorithm.
 
-Thanks to the Template Method pattern, you don't have to change the entire structure when you want to extend the algorithm. It allows clients to extend only certain steps and ensures that the structure of the superclass does not change.
+Moreover, by pulling common steps like analyzing raw data and generating reports into the base class, we can eliminate repeated code. Thus, while the subclass retains the code specific to different data formats, we keep common steps in one place.
 
-If you want to upgrade steps with similar implementations and eliminate code duplication, you should definitely consider the Template Method design pattern.
+With the Template Method pattern, when we want to extend the algorithm, we don't have to change the entire structure. It only allows clients to extend specific steps while ensuring the structure of the superclass remains unchanged.
 
-As a result, you can flexibly extend your algorithms and avoid code duplication thanks to the Template Method pattern. This saves you both time and headaches. 
+If you want to pull shared steps of similar applications into a superclass and eliminate code repetition, you should definitely consider the Template Method design pattern.
+
+In conclusion, with the Template Method pattern, you can flexibly extend your algorithms and eliminate code repetition, saving you both time and headaches.
+
+This design pattern is crucial in data mining applications, making our applications more flexible and manageable. With the Template Method pattern, we can facilitate the expansion of our algorithms and increase efficiency. Hopefully, this article has helped you understand what the Template Method pattern is all about.
+
+---
+
+# Document Processor Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class CSVProcessor {
+  + CSVProcessor() 
+  ~ extractData() void
+  ~ openDocument() void
+  ~ generateReport() void
+  ~ closeDocument() void
+}
+class DOCProcessor {
+  + DOCProcessor() 
+  ~ generateReport() void
+  ~ extractData() void
+  ~ openDocument() void
+  ~ closeDocument() void
+}
+class DocumentProcessor {
+  + DocumentProcessor() 
+  + processDocument() void
+  ~ openDocument() void
+  ~ extractData() void
+  ~ generateReport() void
+  ~ closeDocument() void
+}
+class PDFProcessor {
+  + PDFProcessor() 
+  ~ generateReport() void
+  ~ closeDocument() void
+  ~ extractData() void
+  ~ openDocument() void
+}
+
+CSVProcessor  -->  DocumentProcessor 
+DOCProcessor  -->  DocumentProcessor 
+DocumentProcessor  ..>  DocumentProcessor 
+PDFProcessor  -->  DocumentProcessor 
+```

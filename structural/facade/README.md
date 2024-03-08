@@ -23,3 +23,52 @@ This pattern can be used when you want to access only a specific part of a compl
 The **Facade** design pattern is also related to other design patterns. For example, while the **Adapter** pattern tries to make an existing interface usable, the **Facade** creates a new interface for existing objects. Also, **Facade** and **Mediator** patterns have similar tasks; both organize the interaction of many interconnected objects.
 
 In conclusion, the **Facade** design pattern reduces code complexity while interacting with complex systems. It provides developers with a more efficient working environment by simplifying the integration process with third-party libraries. As a result, software project management and understanding become easier, allowing developers to use their time more efficiently.
+
+---
+
+# Kredi Kullandırma Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Banka {
++ Banka()
++ krediKullanabilirMi(Musteri, double) boolean
+  }
+  class Kredi {
++ Kredi()
++ krediKullan(Musteri, double) void
+  }
+  class KrediFirsati {
++ KrediFirsati()
++ krediKullan(Musteri, double) void
+  }
+  class KrediKullandir {
+  <<Interface>>
++ krediKullanabilirMi(Musteri, double) boolean
+  }
+  class MerkezBanka {
++ MerkezBanka()
++ krediKullanabilirMi(Musteri, double) boolean
+  }
+  class Musteri {
++ Musteri(String)
+- String ad
+  String ad
+  }
+
+Banka  ..>  KrediKullandir
+Banka  ..>  Musteri
+Kredi  ..>  Musteri
+KrediFirsati "1" *--> "banka 1" Banka
+KrediFirsati  ..>  Banka : «create»
+KrediFirsati "1" *--> "kredi 1" Kredi
+KrediFirsati  ..>  Kredi : «create»
+KrediFirsati  ..>  MerkezBanka : «create»
+KrediFirsati "1" *--> "merkezBanka 1" MerkezBanka
+KrediFirsati  ..>  Musteri
+KrediKullandir  ..>  Musteri
+MerkezBanka  ..>  KrediKullandir
+MerkezBanka  ..>  Musteri 
+```
+

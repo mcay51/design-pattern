@@ -1,4 +1,4 @@
-Visitor Tasarım Deseni: 
+## Visitor Tasarım Deseni
 
 Bu desen, algoritmaları üzerinde çalıştıkları nesnelerden ayırmanıza olanak sağlayan bir davranışsal tasarım kalıbıdır.
 
@@ -31,3 +31,58 @@ However, calling these methods is not easy either. Considering that each method 
 In conclusion, thanks to the visitor pattern, we had to modify the leaf node classes, but the change we made is quite simple and allows us to make other changes in the future without modifying the code. By creating a common interface for all visitors, all existing leaf nodes can work with any visitor object we provide. This makes our job much easier.
 
 In summary, we can say that the visitor pattern is a great design pattern that allows you to visit your geographic information. I hope this information has been helpful for you, and I wish you a pleasant journey visiting your geographic information!
+
+---
+
+# Gezi Uygulama Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class City {
+  + City() 
+  + explore() void
+  + accept(Visitor) void
+}
+class GeographicElement {
+<<Interface>>
+  + accept(Visitor) void
+}
+class GeographicVisitor {
+  + GeographicVisitor() 
+  + visit(Industry) void
+  + visit(TouristSpot) void
+  + visit(City) void
+}
+class Industry {
+  + Industry() 
+  + analyze() void
+  + accept(Visitor) void
+}
+class TouristSpot {
+  + TouristSpot() 
+  + accept(Visitor) void
+  + discover() void
+}
+class Visitor {
+<<Interface>>
+  + visit(Industry) void
+  + visit(City) void
+  + visit(TouristSpot) void
+}
+
+City  ..>  GeographicElement 
+City  ..>  Visitor 
+GeographicElement  ..>  Visitor 
+GeographicVisitor  ..>  City 
+GeographicVisitor  ..>  Industry 
+GeographicVisitor  ..>  TouristSpot 
+GeographicVisitor  ..>  Visitor 
+Industry  ..>  GeographicElement 
+Industry  ..>  Visitor 
+TouristSpot  ..>  GeographicElement 
+TouristSpot  ..>  Visitor 
+Visitor  ..>  City 
+Visitor  ..>  Industry 
+Visitor  ..>  TouristSpot 
+```

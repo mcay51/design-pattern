@@ -33,3 +33,46 @@ In conclusion, the Abstract Factory pattern can help you work with related produ
 The best part of this pattern is that you can think like a real factory and challenge your imagination. You can imagine the most wonderful furniture store and bring it to life with your code.
 
 Remember, the Abstract Factory pattern not only improves your code but also makes your customers happy!
+
+---
+
+# Mobilya Fabrikası Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Furniture {
+<<Interface>>
+  + assemble() void
+}
+class FurnitureFactory {
+<<Interface>>
+  + createFurniture() Furniture
+}
+class ModernFurniture {
+  + ModernFurniture() 
+  + assemble() void
+}
+class ModernFurnitureFactory {
+  + ModernFurnitureFactory() 
+  + createFurniture() Furniture
+}
+class VictorianFurniture {
+  + VictorianFurniture() 
+  + assemble() void
+}
+class VictorianFurnitureFactory {
+  + VictorianFurnitureFactory() 
+  + createFurniture() Furniture
+}
+
+FurnitureFactory  ..>  Furniture 
+ModernFurniture  ..>  Furniture 
+ModernFurnitureFactory  ..>  Furniture 
+ModernFurnitureFactory  ..>  FurnitureFactory 
+ModernFurnitureFactory  ..>  ModernFurniture : «create»
+VictorianFurniture  ..>  Furniture 
+VictorianFurnitureFactory  ..>  Furniture 
+VictorianFurnitureFactory  ..>  FurnitureFactory 
+VictorianFurnitureFactory  ..>  VictorianFurniture : «create»
+```

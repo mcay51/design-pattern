@@ -47,3 +47,74 @@ The Adapter pattern has relationships with other design patterns. For example, w
 ## Conclusion
 
 The Adapter design pattern facilitates the collaboration of classes that are incompatible with your existing codebase, thereby increasing the extensibility of your application and making your code more modular. This allows for easier adaptation to future changes and seamless integration of new functionalities.
+
+---
+
+# Fax Error Adapter Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class DbError {
++ DbError(int, String)
++ sendMail() void
++ errorNumber() int
++ description() String
+  }
+  class Error {
+  <<Interface>>
++ errorNumber() int
++ description() String
++ sendMail() void
+  }
+  class ErrorNotify {
++ ErrorNotify()
++ handleAndNotifyError(Error) void
+  }
+  class FaxError {
++ FaxError(int, String)
+- int faxErrorCode
+- String faxErrorMessage
+  int faxErrorCode
+  String faxErrorMessage
+  }
+  class FaxErrorAdapter {
++ FaxErrorAdapter(FaxError)
++ sendMail() void
++ errorNumber() int
++ description() String
+  }
+
+DbError  ..>  Error
+ErrorNotify  ..>  Error
+FaxErrorAdapter  ..>  Error
+FaxErrorAdapter "1" *--> "faxError 1" FaxError 
+```
+
+---
+
+# XML to JSON Uygulama Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Analytics {
+<<Interface>>
+  + analyzeData(String) void
+}
+class JsonAnalytics {
+  + JsonAnalytics() 
+  + analyzeData(String) void
+  + performAnalysis(String) void
+}
+class XmlToJsonAdapter {
+  + XmlToJsonAdapter(JsonAnalytics) 
+  + analyzeData(String) void
+  - convertXmlToJson(String) String
+}
+
+JsonAnalytics  ..>  Analytics 
+XmlToJsonAdapter  ..>  Analytics 
+XmlToJsonAdapter "1" *--> "jsonAnalytics 1" JsonAnalytics 
+XmlToJsonAdapter  ..>  XmlToJsonAdapter 
+```

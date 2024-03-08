@@ -23,3 +23,28 @@ Useful for providing a single solution within a class without dispersing through
 This pattern is also associated with other design patterns such as Abstract Factory, Builder, and Prototype, and even applications of Singleton can be made to these patterns. However, despite some differences, it bears similarities to structural design patterns like Facade and Flyweight.
 
 In conclusion, the Singleton Design Pattern is a preferred design pattern that adheres to programming principles by focusing on a single responsibility and ensuring that all clients use only one instance.
+
+---
+
+# Singleton Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Singleton {
+<<Interface>>
+  + clone() Object
+}
+class SingletonImpl {
+  - SingletonImpl() 
+  - UUID uuId
+  - SingletonImpl singletonInstance
+  + clone() Singleton
+   SingletonImpl singletonInstance
+   UUID uuId
+}
+
+SingletonImpl  ..>  Singleton 
+SingletonImpl  ..>  SingletonImpl : «create»
+SingletonImpl "1" *--> "singletonInstance 1" SingletonImpl 
+```

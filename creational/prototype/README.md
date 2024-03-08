@@ -24,3 +24,39 @@ The Prototype pattern can be employed when your code needs to be independent of 
 
 Conclusion:
 The Prototype design pattern allows you to copy objects and use them more flexibly. This pattern is especially useful when creating objects without dependency on other classes, making your code more modular and easier to maintain. It's commonly used in complex systems and customizable applications.
+
+---
+
+# Product Clone Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Color {
+  + Color(String) 
+  - String colorName
+  + clone() Object
+   String colorName
+}
+class Product {
+<<Interface>>
+  + clone() Object
+}
+class ProductImpl {
+  + ProductImpl(int, String, double, Color) 
+  - int productId
+  - String producName
+  - Color color
+  - double listPrice
+  + clone() Object
+   String producName
+   Color color
+   int productId
+   double listPrice
+}
+
+Color  ..>  Color 
+ProductImpl "1" *--> "color 1" Color 
+ProductImpl  ..>  Product 
+ProductImpl  ..>  ProductImpl 
+```

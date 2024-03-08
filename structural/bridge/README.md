@@ -23,3 +23,53 @@ The Bridge pattern separates Abstraction and Implementation using object composi
 The Bridge pattern is also related to other design patterns. For instance, the Adapter pattern allows incompatible classes to work together in an existing application. The Bridge pattern can be used together with the Abstract Factory pattern, especially when the abstractions in the bridge pattern are only valid for certain implementations. Additionally, the Builder and Bridge patterns can be combined, where the director class plays the abstraction role while different builders determine the implementation.
 
 In this way, we have gained a general understanding of the importance and use cases of the bridge design pattern in software development. By preventing complex hierarchical structures, this pattern makes the software development process more manageable. Considering its relationships with other design patterns and its advantages, it can be said that the bridge pattern is a valuable tool in software development projects.
+
+---
+
+# Renkli Şekil Çizme Uygulama Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Blue {
+  + Blue() 
+  + fill() String
+}
+class Circle {
+  + Circle() 
+  + draw() void
+}
+class Color {
+<<Interface>>
+  + fill() String
+}
+class ColoredShape {
+  + ColoredShape(Shape, Color) 
+  + drawShape() void
+}
+class Red {
+  + Red() 
+  + fill() String
+}
+class Shape {
+<<Interface>>
+  + draw() void
+}
+class ShapeWithColor {
+  + ShapeWithColor(Color) 
+  + drawShape() void
+}
+class Square {
+  + Square() 
+  + draw() void
+}
+
+Blue  ..>  Color 
+Circle  ..>  Shape 
+ColoredShape  ..>  Color 
+ColoredShape "1" *--> "shape 1" Shape 
+ColoredShape  -->  ShapeWithColor 
+Red  ..>  Color 
+ShapeWithColor "1" *--> "color 1" Color 
+Square  ..>  Shape 
+```

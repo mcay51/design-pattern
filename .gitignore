@@ -29,3 +29,4 @@ structural/.idea/misc.xml
 structural/.idea/vcs.xml
 structural/.idea/workspace.xml
 *.class
+*.DS_Store

@@ -27,3 +27,47 @@ Solution: Enter the Factory Method. This method makes the object creation proces
 But of course, this magical power has a limit. The created objects need to have a common interface. So, even though trucks and ships may be different, they need to share the same method for carrying out transportation operations. Essentially, everyone needs to speak the same language.
 
 Conclusion: The Factory Method is actually quite magical. It enables adding new objects without changing the code. It's like saying, "I want to be a ship now." This allows everyone to transport goods as they please. It's a bit like going to Hogwarts, isn't it?
+
+---
+
+# Transportation Örneği UML Class Diyagramı
+
+```mermaid
+classDiagram
+direction BT
+class Bus {
+  + Bus() 
+  + deliver() void
+}
+class Ship {
+  + Ship() 
+  + deliver() void
+}
+class TransportType {
+<<enumeration>>
+  + TransportType() 
+  + values() TransportType[]
+  + valueOf(String) TransportType
+}
+class Transportation {
+<<Interface>>
+  + deliver() void
+}
+class TransportationFactory {
+  + TransportationFactory() 
+  + createTransportation(TransportType) Transportation
+}
+class Truck {
+  + Truck() 
+  + deliver() void
+}
+
+Bus  ..>  Transportation 
+Ship  ..>  Transportation 
+TransportationFactory  ..>  Bus : «create»
+TransportationFactory  ..>  Ship : «create»
+TransportationFactory  ..>  TransportType 
+TransportationFactory  ..>  Transportation 
+TransportationFactory  ..>  Truck : «create»
+Truck  ..>  Transportation 
+```
