@@ -1,14 +1,21 @@
-* Singleton Design Pattern Nedir?
+## Singleton Tasarım Deseni Nedir?
 
-Singleton Tasarım Deseni, bir sınıfın yalnızca bir tane örneğinin olduğundan emin olmak için kullanılır. Yani, sanki sınıfın dünyada sadece bir tane mağazası varmış gibi düşün. Bu desen, sınıfın içinde tek bir örnek oluşturarak herkesin ona erişmesini sağlar. Mesela, herkes aynı mağazaya gider ve hep aynı ürünleri alır. Bu şekilde, herkes aynı örnek üzerinde işlem yapar ve kafası karışmaz.
+Singleton tasarım deseni, yazılım geliştirme sürecinde sıklıkla kullanılan bir tasarım desenidir. Bu desen, bir sınıfın yalnızca bir örneğinin oluşturulmasını ve bu örneğe global erişimin sağlanmasını amaçlar. Yalnızca bir örneğin oluşturulması, kaynak kullanımını optimize ederken, global erişim ise uygulama genelinde tutarlılık sağlar.
 
-Singleton deseni, programlama kurallarına uygun bir şekilde, tek bir görevle ilgilenmek için yapılmıştır. Bu desen, sınıfın içinde sadece bir tane örnek olduğunu garanti eder. Bu sayede, herkes aynı örneği kullanır. Aynı zamanda, Singleton deseni, önemli nesnelerin güvenle saklanmasını sağlar ve herkesin onlara erişmesini kolaylaştırır.
+Bu tasarım deseni genellikle ihtiyaç duyulan tek bir nesnenin varlığını garanti etmek için kullanılır. Örneğin, veritabanı bağlantısı, dosya işlemleri veya ayar yönetimi gibi durumlarda Singleton tasarım deseni tercih edilebilir. Bu sayede, uygulama genelinde aynı nesnenin kullanılması sağlanarak veri bütünlüğü korunur.
 
-Bu desen, program içinde bir sınıfın içinde herhangi bir yerden dağılmadan tek bir çözüm sunar. Yani, sanki herkes aynı hikayeyi dinliyormuş gibi düşün. Bu desen, herkesin aynı hikayeyi anlamasını sağlar ve kafalar karışmaz. Özellikle, tüm istemcilerin aynı hikayeyi dinlemesi gerektiğinde çok işe yarar.
+Singleton tasarım deseni, genellikle aşağıdaki özelliklere sahiptir:
 
-Singleton Tasarım Deseni, diğer tasarım desenleriyle de ilişkilendirilmiştir. Mesela, Abstract Factory, Builder ve Prototype gibi. Bu desenlerin hepsi, sınıfın içinde tek bir örnek oluşturmayı sağlar. Fakat, Singleton deseni, bazı farklılıklarla da öne çıkar. Mesela, farklı tiplerdeki tasarım desenleri gibi düşünebilirsin. Ama herkesin aynı tipte bir deseni olduğunu düşün.
+1. Özel bir kurucu metot: Sınıfın dışından erişilemeyen bir kurucu metot ile sadece bir örneğin oluşturulmasını sağlar.
 
-Sonuç olarak, Singleton Tasarım Deseni, programlama kurallarına uygun şekilde, tek bir görevle ilgilenerek ve herkesin aynı şeyi görmesini sağlayan  bir tasarım desenidir.
+2. Static bir referans: Oluşturulan tek örnek, static bir referans ile tutulur ve uygulama genelinde erişime olanak tanır.
+
+3. Lazy initialization (Tembel İlkelleştirme): Örneğin oluşturulması, ihtiyaç duyulduğunda gerçekleşir. Bu sayede gereksiz kaynak kullanımı önlenir.
+
+Singleton tasarım deseninin avantajları arasında kaynak kullanımının optimize edilmesi, tutarlılık ve bütünlüğün sağlanması ve global erişimin kolaylaştırılması bulunur. Ancak, yanlış implementasyonlarından dolayı bazı dezavantajları da olabilir. Örneğin, çoklu iş parçacığı ortamlarında senkronizasyon sorunları yaşanabilir.
+
+Sonuç olarak, Singleton tasarım deseni, yazılım geliştirme sürecinde tek bir örneğin oluşturulmasını ve bu örneğe global erişimin sağlanmasını amaçlayan önemli bir tasarım desenidir. Doğru senaryolarda ve doğru şekilde implemente edildiğinde, uygulamanın performansını artırabilir ve tutarlılığı sağlayabilir. Ancak, dikkatli bir şekilde kullanılmalı ve gereksiz yere zorlanmamalıdır.
+
 
 ---
 
