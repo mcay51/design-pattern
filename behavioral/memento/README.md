@@ -6,7 +6,7 @@ Yazılım geliştirme sürecinde, nesneler arasındaki ilişkilerin dinamik olar
 
 Memento deseninin uygulanabilirliği geniş bir yelpazeye sahiptir. Örneğin, bir nesnenin önceki durumuna geri getirilmesi gerektiğinde anlık görüntüler oluşturmak için kullanılabilir. Ayrıca, bir nesnenin alanlarına erişmek kapsam sınırlarını ihlal ediyorsa, Memento deseni bu durumu düzeltebilir.
 
-Bu desen ayrıca diğer tasarım desenleriyle de ilişkilidir. Örneğin, **Komut Tasarım Deseni** ile bir araya getirilerek geri alma işlevi uygulanabilir. **Yineleyici Tasarım Deseni** ile birlikte kullanılarak mevcut gezinim durumu yakalanabilir ve gerektiğinde geri alınabilir.
+Bu desen ayrıca diğer tasarım desenleriyle de ilişkilidir. Örneğin, **Strategy Tasarım Deseni** ile bir araya getirilerek geri alma işlevi uygulanabilir. **Iterator Tasarım Deseni** ile birlikte kullanılarak mevcut gezinim durumu yakalanabilir ve gerektiğinde geri alınabilir.
 
 Memento tasarım deseni, nesne durumlarını esnek ve kapsüllenmiş bir şekilde yönetmek için sağlam bir çözüm sunar. Bu desen, yazılım sistemlerinin bakımını kolaylaştırır ve geliştiricilere değerli bir araç sunar. Nesneler arasındaki ilişkilerin dinamik olarak yönetilmesi ve sistemlerin modüler olması gerektiği durumlarda Memento tasarım deseni, esneklik ve adaptasyon yeteneği sağlayarak yazılım geliştirme sürecine katkıda bulunur.
 
@@ -20,7 +20,7 @@ Let's say we're developing a text editor application and we want to add a featur
 
 The applicability of the Memento pattern is broad. It can be used to create snapshots when a previous state of an object needs to be restored. Additionally, if accessing the fields of an object violates encapsulation, the Memento pattern can address this issue.
 
-The Memento pattern is also related to other design patterns. For example, it can be combined with the Command Design Pattern to implement undo functionality. It can also be used in conjunction with the Iterator Design Pattern to capture the current navigation state and undo it when necessary.
+The Memento pattern is also related to other design patterns. For example, it can be combined with the Strategy Design Pattern to implement undo functionality. It can also be used in conjunction with the Iterator Design Pattern to capture the current navigation state and undo it when necessary.
 
 In conclusion, the Memento design pattern provides a robust solution for managing object states in a flexible and encapsulated manner. This pattern simplifies maintenance of software systems and provides developers with a valuable tool.
 
