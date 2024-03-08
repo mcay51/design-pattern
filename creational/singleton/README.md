@@ -6,7 +6,7 @@ Bu tasarım deseni genellikle ihtiyaç duyulan tek bir nesnenin varlığını ga
 
 Singleton tasarım deseni, genellikle aşağıdaki özelliklere sahiptir:
 
-1. Özel bir kurucu metot: Sınıfın dışından erişilemeyen bir kurucu metot ile sadece bir örneğin oluşturulmasını sağlar.
+1. Private bir Constructor metot: Sınıfın dışından erişilemeyen bir kurucu metot ile sadece bir örneğin oluşturulmasını sağlar.
 
 2. Static bir referans: Oluşturulan tek örnek, static bir referans ile tutulur ve uygulama genelinde erişime olanak tanır.
 
