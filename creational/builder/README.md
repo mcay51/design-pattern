@@ -1,14 +1,14 @@
-***Builder Tasarım Deseni:*** Karmaşıklığı Azaltmak İçin Bir Yol Haritası
+## Builder Tasarım Deseni: Karmaşıklığı Azaltmak İçin Bir Yol Haritası
 
-Karmaşık nesnelerin adım adım yaratıldığı bu yapısal tasarım deseni aslında bir tür "karmaşık nesne oluşturma rehberi" gibi düşünülebilir. Adım adım ilerleyerek istediğiniz türde ve sunumda nesneleri kolaylıkla oluşturmanıza olanak tanır. Bu, artık her şeyi tek bir oluşturucu koduyla halletmek zorunda olmadığınız anlamına gelir!
+Builder tasarım deseni, karmaşık nesnelerin adım adım oluşturulmasını sağlayan bir yapısal tasarım desenidir. Bu desen, adım adım ilerleyerek istenilen türde ve sunumda nesnelerin kolayca oluşturulmasına olanak tanır. Artık her şeyi tek bir oluşturucu koduyla halletmek zorunda değilsiniz!
 
-Örnek olarak, House nesnesini tanımlayan evleri ele alalım. Basit bir ev için dört duvar, zemin, kapı, pencere ve çatı gibi adımları izlemeniz gerekebilir. Ancak işler daha karmaşık hale geldiğinde, örneğin büyük bir ev veya özel gereksinimlere sahip bir ev inşa etmek istediğinizde karmaşıklaşabilir. İşte burada Builder deseni devreye girer.
+Örnek olarak, evleri temsil eden House nesnesini ele alalım. Basit bir ev için dört duvar, zemin, kapı, pencere ve çatı gibi adımları izlemeniz gerekebilir. Ancak işler karmaşık hale geldiğinde, örneğin büyük veya özel gereksinimlere sahip bir ev inşa etmek istediğinizde, işler karmaşıklaşabilir. İşte burada Builder deseni devreye girer.
 
-Builder deseni, nesne oluşturma sürecini adımlara ayırır ve yalnızca gereken adımları çalıştırmanıza izin verir. Yüzme havuzu sadece belirli evlerde gerekiyorsa, bu özelliği sadece o ev için ekleyebilirsiniz. Diğer evler için gereksiz parametreleri düşünmek zorunda kalmazsınız.
+Builder deseni, nesne oluşturma sürecini adımlara böler ve yalnızca gereken adımları çalıştırmanıza olanak sağlar. Yüzme havuzu sadece belirli evlerde gerekiyorsa, bu özelliği sadece o ev için ekleyebilirsiniz. Diğer evler için gereksiz parametreleri düşünmek zorunda kalmazsınız.
 
-Ek olarak, farklı türde nesneler oluşturmak için farklı yapılandırmacıları kullanabilirsiniz. Ahşap ve camdan mı yoksa taş ve demirden mi yapılan bir ev istediğinize bağlı olarak farklı yapılandırmacıları seçebilirsiniz. Her yapılandırıcı farklı bir yaklaşımla çalışır ve istemci koduyla standart bir arabirim üzerinden etkileşime geçebilir.
+Ayrıca, farklı türde nesneler oluşturmak için farklı yapılandırıcıları kullanabilirsiniz. Ahşap veya camdan mı yoksa taş veya demirden mi yapılan bir ev istediğinize bağlı olarak farklı yapılandırıcıları seçebilirsiniz. Her yapılandırıcı farklı bir yaklaşımla çalışır ve istemci koduyla standart bir arabirim üzerinden etkileşime geçebilir.
 
-Ve elbette unutulmamalıdır ki, Director sınıfı da mevcuttur! Bu sınıf, yapılandırıcı adımlarını çalıştırarak sonuç olarak işlevsel bir ürün elde etmek için gereken adımları belirler. Dolayısıyla, aslında yapılandırıcıları yönlendiren bir tür rehber gibi düşünebiliriz.
+Ve unutulmamalıdır ki, Director sınıfı da mevcuttur! Bu sınıf, yapılandırıcı adımlarını çalıştırarak sonuç olarak işlevsel bir ürün elde etmek için gereken adımları belirler. Dolayısıyla, aslında yapılandırıcıları yönlendiren bir tür rehber olarak düşünülebilir.
 
 Builder deseni aynı zamanda teleskopik yapılandırmadan kurtulmanıza da yardımcı olur. Artık onlarca parametre göndermek zorunda değilsiniz. Yalnızca ihtiyaç duyulan adımları çağırarak nesneleri adım adım oluşturabilirsiniz.
 
