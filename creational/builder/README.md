@@ -1,6 +1,6 @@
 ## Builder Tasarım Deseni: Karmaşıklığı Azaltmak İçin Bir Yol Haritası
 
-Builder tasarım deseni, karmaşık nesnelerin adım adım oluşturulmasını sağlayan bir yapısal tasarım desenidir. Bu desen, adım adım ilerleyerek istenilen türde ve sunumda nesnelerin kolayca oluşturulmasına olanak tanır. Artık her şeyi tek bir oluşturucu koduyla halletmek zorunda değilsiniz!
+Builder tasarım deseni, karmaşık nesnelerin adım adım oluşturulmasını sağlayan bir creational tasarım desenidir. Bu desen, adım adım ilerleyerek istenilen türde ve sunumda nesnelerin kolayca oluşturulmasına olanak tanır. Artık her şeyi tek bir oluşturucu koduyla halletmek zorunda değilsiniz!
 
 Örnek olarak, evleri temsil eden House nesnesini ele alalım. Basit bir ev için dört duvar, zemin, kapı, pencere ve çatı gibi adımları izlemeniz gerekebilir. Ancak işler karmaşık hale geldiğinde, örneğin büyük veya özel gereksinimlere sahip bir ev inşa etmek istediğinizde, işler karmaşıklaşabilir. İşte burada Builder deseni devreye girer.
 
@@ -18,7 +18,7 @@ Tüm bunların ötesinde, Builder deseni karmaşıklığı azaltmak için harika
 
 Builder Design Pattern: A Roadmap to Reduce Complexity
 
-This structural design pattern, where complex objects are created step by step, can actually be thought of as a kind of "complex object creation guide." It allows you to easily create objects of the desired type and presentation by progressing step by step. This means you no longer have to handle everything with a single builder code!
+This creational design pattern, where complex objects are created step by step, can actually be thought of as a kind of "complex object creation guide." It allows you to easily create objects of the desired type and presentation by progressing step by step. This means you no longer have to handle everything with a single builder code!
 
 For example, let's take houses, which are represented by the House object. For a simple house, you may need to follow steps like creating four walls, a floor, a door, windows, and a roof. However, when things get more complex, such as when you want to build a large house or a house with special requirements, it can become complicated. This is where the Builder pattern comes in.
 
