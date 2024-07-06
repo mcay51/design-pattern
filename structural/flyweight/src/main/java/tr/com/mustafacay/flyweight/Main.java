@@ -9,14 +9,13 @@ public class Main {
 
         System.out.println("Hello world! Flyweight Design Pattern");
 
-        OyunNesnesiFabrikasi fabrika = new OyunNesnesiFabrikasi();
 
         // Askerleri oluştur
-        OyunNesnesi asker1 = fabrika.nesneAl(AskerTipi.PIYADE);
-        OyunNesnesi asker2 = fabrika.nesneAl(AskerTipi.PIYADE);
-        OyunNesnesi asker3 = fabrika.nesneAl(AskerTipi.TOPCU);
-        OyunNesnesi asker4 = fabrika.nesneAl(AskerTipi.HAVACI);
-        OyunNesnesi asker5 = fabrika.nesneAl(AskerTipi.DENIZCI);
+        OyunNesnesi asker1 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.PIYADE);
+        OyunNesnesi asker2 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.PIYADE);
+        OyunNesnesi asker3 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.TOPCU);
+        OyunNesnesi asker4 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.HAVACI);
+        OyunNesnesi asker5 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.DENIZCI);
 
         // Askerleri ekrana çiz
         asker1.ekranaCiz(100, 50);

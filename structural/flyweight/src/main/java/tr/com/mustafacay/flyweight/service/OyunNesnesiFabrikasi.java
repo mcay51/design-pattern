@@ -7,9 +7,9 @@ import java.util.Map;
  * Flyweight Factory sınıfı: Flyweight nesnelerini yönetir ve oluşturur
   */
 public class OyunNesnesiFabrikasi {
-    private Map<AskerTipi, OyunNesnesi> nesneHavuzu = new HashMap<>();
+    private static Map<AskerTipi, OyunNesnesi> nesneHavuzu = new HashMap<>();
 
-    public OyunNesnesi nesneAl(AskerTipi tip) {
+    public static OyunNesnesi nesneAl(AskerTipi tip) {
         if (!nesneHavuzu.containsKey(tip.toString())) {
             nesneHavuzu.put(tip, new Asker(tip)); // Yeni bir asker oluştur
         }
