@@ -58,21 +58,21 @@ classDiagram
 direction BT
 class Banka
 class HavaleOdeme
-class IsBankasi
+class IBankasi
 class KrediKartiOdeme
 class Main
 class Odeme
-class ZiraatBankasi
+class ZBankasi
 
 HavaleOdeme  -->  Odeme
-IsBankasi  -->  Banka
+IBankasi  -->  Banka
 KrediKartiOdeme  -->  Odeme
 Main  ..>  HavaleOdeme : «create»
-Main  ..>  IsBankasi : «create»
+Main  ..>  IBankasi : «create»
 Main  ..>  KrediKartiOdeme : «create»
-Main  ..>  ZiraatBankasi : «create»
+Main  ..>  ZBankasi : «create»
 Odeme "1" *--> "banka 1" Banka
-ZiraatBankasi  -->  Banka 
+ZBankasi  -->  Banka 
 ```
 
 
