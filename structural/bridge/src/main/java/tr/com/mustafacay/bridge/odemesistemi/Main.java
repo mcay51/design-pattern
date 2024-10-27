@@ -4,8 +4,8 @@ import tr.com.mustafacay.bridge.odemesistemi.service.*;
 
 public  class Main {
     public static void main(String[] args) {
-        Banka isBankasi = new IsBankasi();
-        Banka ziraatBankasi = new ZiraatBankasi();
+        Banka isBankasi = new IBankasi();
+        Banka ziraatBankasi = new ZBankasi();
 
         Odeme krediKartiOdeme = new KrediKartiOdeme(isBankasi, 500.0);
         Odeme havaleOdeme = new HavaleOdeme(ziraatBankasi, 1000.0);

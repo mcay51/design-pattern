@@ -73,3 +73,25 @@ Red  ..>  Color
 ShapeWithColor "1" *--> "color 1" Color 
 Square  ..>  Shape 
 ```
+
+```mermaid
+classDiagram
+direction BT
+class Banka
+class HavaleOdeme
+class IBankasi
+class KrediKartiOdeme
+class Main
+class Odeme
+class ZBankasi
+
+HavaleOdeme  -->  Odeme
+IBankasi  -->  Banka
+KrediKartiOdeme  -->  Odeme
+Main  ..>  HavaleOdeme : «create»
+Main  ..>  IBankasi : «create»
+Main  ..>  KrediKartiOdeme : «create»
+Main  ..>  ZBankasi : «create»
+Odeme "1" *--> "banka 1" Banka
+ZBankasi  -->  Banka 
+```

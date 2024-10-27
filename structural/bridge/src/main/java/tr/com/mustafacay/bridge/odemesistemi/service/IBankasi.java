@@ -1,9 +1,9 @@
 package tr.com.mustafacay.bridge.odemesistemi.service;
 
-// Concrete Implementor (ZiraatBankası sınıfı)
-public class ZiraatBankasi extends Banka {
-    public ZiraatBankasi() {
-        super("Ziraat Bankası", "ZRT456");
+// Concrete Implementor (İşBankası sınıfı)
+public class IBankasi extends Banka {
+    public IBankasi() {
+        super("İş Bankası", "IBK123");
     }
 
     @Override
