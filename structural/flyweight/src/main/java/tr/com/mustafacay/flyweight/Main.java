@@ -8,8 +8,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world! Flyweight Design Pattern");
-
-
         // Askerleri oluştur
         OyunNesnesi asker1 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.PIYADE);
         OyunNesnesi asker2 = OyunNesnesiFabrikasi.nesneAl(AskerTipi.PIYADE);

@@ -53,4 +53,26 @@ Kutu "1" *--> "icerikler *" Fiyatlanabilir
 Urun  ..>  Fiyatlanabilir
 ```
 
+```mermaid
+classDiagram
+direction BT
+class Banka
+class HavaleOdeme
+class IsBankasi
+class KrediKartiOdeme
+class Main
+class Odeme
+class ZiraatBankasi
+
+HavaleOdeme  -->  Odeme
+IsBankasi  -->  Banka
+KrediKartiOdeme  -->  Odeme
+Main  ..>  HavaleOdeme : «create»
+Main  ..>  IsBankasi : «create»
+Main  ..>  KrediKartiOdeme : «create»
+Main  ..>  ZiraatBankasi : «create»
+Odeme "1" *--> "banka 1" Banka
+ZiraatBankasi  -->  Banka 
+```
+
 

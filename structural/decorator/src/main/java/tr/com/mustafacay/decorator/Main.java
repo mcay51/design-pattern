@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Hello world! Decorator Design Pattern\n");
 
         System.out.println("Örnek 1 Bildirim Uygulaması");
-      //  bildirimOrnek();
+        bildirimOrnek();
         System.out.println("********************************************\n");
 
         System.out.println("Örnek 2 Maaş Hesaplama");
